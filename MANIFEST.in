@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include kp_edtec *.css
+recursive-include kp_edtec *.csv
+recursive-include kp_edtec *.html
+recursive-include kp_edtec *.ico
+recursive-include kp_edtec *.js
+recursive-include kp_edtec *.json
+recursive-include kp_edtec *.md
+recursive-include kp_edtec *.png
+recursive-include kp_edtec *.py
+recursive-include kp_edtec *.svg
+recursive-include kp_edtec *.txt
+recursive-exclude kp_edtec *.pyc
