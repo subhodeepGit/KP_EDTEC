@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "creation": "2021-05-25 21:06:24.882783",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "answer_sheet_codes",
+  "disciplinary_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "answer_sheet_codes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Answer sheet Codes"
+  },
+  {
+   "fieldname": "disciplinary_action",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Disciplinary Action"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "migration_hash": "8d9427eda43b13b993a946580190c462",
+ "modified": "2022-02-01 11:35:39.981123",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Student Paper Code",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

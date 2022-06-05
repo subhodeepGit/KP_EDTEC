@@ -1,0 +1,17 @@
+<div class="col-sm-12">
+    <div class="checkbox">
+        <label>
+            <input
+                type="checkbox"
+                data-group_roll_number="{{group_roll_number}}"
+                data-student="{{student}}"
+                data-student-name="{{student_name}}"
+                class="students-check"
+                {% if status === "Present" %}
+                checked
+                {% endif %}
+                >
+            {{ group_roll_number }} - <b>{{ student_name }}</b>   ({{student}})
+        </label>
+    </div>
+</div>

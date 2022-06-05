@@ -1,0 +1,6 @@
+{
+	"js/kp_edtec.min.js": [
+		"public/core_js/breadcrumbs.js",
+		"public/js/student_button_custom.html"
+	]
+}

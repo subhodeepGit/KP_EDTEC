@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "autoname": "field:building_name",
+ "creation": "2021-10-03 16:51:47.182555",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "disable",
+  "building_name",
+  "hostel_category",
+  "location",
+  "column_break_4",
+  "total_floor",
+  "total_rooms",
+  "address_and_contact_section",
+  "address_html",
+  "column_break_7",
+  "contact_html",
+  "associated_employee_section",
+  "hostel_employee"
+ ],
+ "fields": [
+  {
+   "fieldname": "building_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Building Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "total_floor",
+   "fieldtype": "Data",
+   "label": "Total Floor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "hostel_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hostel Category",
+   "options": "Hostel Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact",
+   "options": "fa fa-map-marker"
+  },
+  {
+   "fieldname": "address_html",
+   "fieldtype": "HTML",
+   "label": "Address HTML"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML"
+  },
+  {
+   "fieldname": "total_rooms",
+   "fieldtype": "Int",
+   "label": "Total Rooms"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "By checking this all the hostel rooms of the building will also be disabled",
+   "fieldname": "disable",
+   "fieldtype": "Check",
+   "label": "Disable"
+  },
+  {
+   "fieldname": "associated_employee_section",
+   "fieldtype": "Section Break",
+   "label": "Associated Employee"
+  },
+  {
+   "fieldname": "hostel_employee",
+   "fieldtype": "Table",
+   "label": "Hostel Employee",
+   "options": "Hostel Employee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-18 17:56:04.880129",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Building",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

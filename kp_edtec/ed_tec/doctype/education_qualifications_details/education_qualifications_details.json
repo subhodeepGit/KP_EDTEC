@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "creation": "2021-05-16 16:24:02.109546",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "qualification",
+  "qualification_",
+  "institute",
+  "board",
+  "percentage_cgpa",
+  "score",
+  "column_break_6",
+  "year_of_completion",
+  "year_of_completion_"
+ ],
+ "fields": [
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Qualification",
+   "options": "Eligibility Parameters"
+  },
+  {
+   "fieldname": "institute",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Institute"
+  },
+  {
+   "fieldname": "board",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Board / University"
+  },
+  {
+   "columns": 1,
+   "fieldname": "year_of_completion",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Year of Completion",
+   "options": "Academic Year",
+   "width": "10px"
+  },
+  {
+   "columns": 1,
+   "fieldname": "percentage_cgpa",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Percentage/ CGPA",
+   "options": "\nPercentage\nCGPA/SGPA",
+   "reqd": 1,
+   "width": "10px"
+  },
+  {
+   "columns": 1,
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score",
+   "reqd": 1,
+   "width": "10px"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qualification_",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Qualification"
+  },
+  {
+   "fieldname": "year_of_completion_",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Year of Completion"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-30 12:01:14.157055",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Education Qualifications Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

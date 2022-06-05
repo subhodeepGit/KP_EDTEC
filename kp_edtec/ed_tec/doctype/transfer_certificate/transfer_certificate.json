@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TCRT-.######",
+ "creation": "2022-06-01 15:39:23.517244",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "mothers_name",
+  "column_break_3",
+  "student_name",
+  "fathers_name",
+  "permanent_address_section",
+  "village",
+  "post_office",
+  "police_station",
+  "district",
+  "pincode",
+  "date_of_admission_as_in_the_admission_register",
+  "serial_no_in_admisson_register",
+  "date_of_birth_as_recorderd_in_admission_register",
+  "section_break_21",
+  "date_of_birth_in_words",
+  "date_of_leaving_the_college",
+  "class_in_which_studying",
+  "character",
+  "wheather_heshe_has_passed_the_annual_examination",
+  "reason_for_leaving_the_college",
+  "subjects_taken",
+  "section_break_23",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fetch_from": "student.mothers_name",
+   "fieldname": "mothers_name",
+   "fieldtype": "Data",
+   "label": "Mother's Name"
+  },
+  {
+   "fetch_from": "student.fathers_name",
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "label": "Father's Name"
+  },
+  {
+   "fieldname": "permanent_address_section",
+   "fieldtype": "Section Break",
+   "label": "Permanent Address"
+  },
+  {
+   "fetch_from": "student.city",
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Village"
+  },
+  {
+   "fetch_from": "student.post_office",
+   "fieldname": "post_office",
+   "fieldtype": "Data",
+   "label": "Post Office"
+  },
+  {
+   "fetch_from": "student.police_station",
+   "fieldname": "police_station",
+   "fieldtype": "Data",
+   "label": "Police Station"
+  },
+  {
+   "fetch_from": "student.district",
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fetch_from": "student.pin_code",
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "date_of_admission_as_in_the_admission_register",
+   "fieldtype": "Data",
+   "label": "Date of Admission as in the Admission Register"
+  },
+  {
+   "fetch_from": "student.permanant_registration_number",
+   "fieldname": "serial_no_in_admisson_register",
+   "fieldtype": "Data",
+   "label": "Serial No. in Admisson Register"
+  },
+  {
+   "fetch_from": "student.date_of_birth",
+   "fieldname": "date_of_birth_as_recorderd_in_admission_register",
+   "fieldtype": "Data",
+   "label": "Date of Birth as recorderd in admission register"
+  },
+  {
+   "fieldname": "date_of_birth_in_words",
+   "fieldtype": "Data",
+   "label": "Date of Birth in words"
+  },
+  {
+   "fieldname": "date_of_leaving_the_college",
+   "fieldtype": "Data",
+   "label": "Date of Leaving the College"
+  },
+  {
+   "fieldname": "character",
+   "fieldtype": "Data",
+   "label": "Character"
+  },
+  {
+   "fieldname": "wheather_heshe_has_passed_the_annual_examination",
+   "fieldtype": "Select",
+   "label": "Wheather he/she has passed the Annual Examination",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "reason_for_leaving_the_college",
+   "fieldtype": "Data",
+   "label": "Reason for leaving the college"
+  },
+  {
+   "fieldname": "subjects_taken",
+   "fieldtype": "Data",
+   "label": "Subjects Taken"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "class_in_which_studying",
+   "fieldtype": "Data",
+   "label": "Program"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-01 17:02:47.026473",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Transfer Certificate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

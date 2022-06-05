@@ -1,0 +1,38 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-01-25 11:13:33.455803",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-02-04 11:56:11.373794",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Course Wise Result",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Student",
+ "report_name": "Course Wise Result",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Academics User"
+  },
+  {
+   "role": "Instructor"
+  },
+  {
+   "role": "Student"
+  },
+  {
+   "role": "LMS User"
+  },
+  {
+   "role": "Education Administrator"
+  }
+ ]
+}

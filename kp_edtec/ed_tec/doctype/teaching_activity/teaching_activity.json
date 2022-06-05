@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "creation": "2021-09-16 20:31:53.141590",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course",
+  "course_name",
+  "course_code",
+  "mode_of_teaching",
+  "hours_per_week_alloted",
+  "classes_attended",
+  "_classes_taken",
+  "score",
+  "column_break_7",
+  "description"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course",
+   "options": "Course",
+   "read_only": 1,
+   "width": "10px"
+  },
+  {
+   "columns": 1,
+   "fieldname": "mode_of_teaching",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode Of Teaching",
+   "options": "\nOnline\nOffline",
+   "width": "10px"
+  },
+  {
+   "columns": 1,
+   "fieldname": "hours_per_week_alloted",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Hours Allotted",
+   "read_only": 1,
+   "width": "50px"
+  },
+  {
+   "columns": 1,
+   "fieldname": "_classes_taken",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "% Classes Taken",
+   "read_only": 1,
+   "width": "10px"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grading",
+   "read_only": 1,
+   "width": "10px"
+  },
+  {
+   "columns": 1,
+   "fieldname": "classes_attended",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Actual Classes Hrs",
+   "read_only": 1,
+   "width": "50px"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf 80% & above - Good\n\u25cf 70% to 80% - Above Satisfactory\n\u25cf Below 70 %- Not Satisfactory",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Score Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "course_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Code",
+   "read_only": 1,
+   "width": "10px"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-02-17 17:53:43.009115",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Teaching Activity",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

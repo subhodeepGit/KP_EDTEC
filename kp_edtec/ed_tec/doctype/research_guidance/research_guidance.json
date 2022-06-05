@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2021-09-20 17:10:10.504530",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "number_enrolled",
+  "thesis_submitted",
+  "degree_awarded",
+  "single__joint_supervisor",
+  "research_score_claimed",
+  "score",
+  "column_break_8",
+  "score_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Title",
+   "options": "\nPh.D\nM.Phil\nPG Dissertation"
+  },
+  {
+   "fieldname": "number_enrolled",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Candidates"
+  },
+  {
+   "fieldname": "degree_awarded",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Degree Awarded with Date"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Score"
+  },
+  {
+   "fieldname": "thesis_submitted",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Thesis Submitted"
+  },
+  {
+   "fieldname": "single__joint_supervisor",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Single / Joint Supervisor",
+   "options": "\nSingle Supervisor\nJoint Supervisor"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf Score: 10 per candidate for Ph.D degree awarded and 2 per candidate for M.Phil/ P.G. dissertation\n\u25cf For joint supervision of research students, both supervisor and co-supervisor will get 70% of total score",
+   "fieldname": "score_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Score Description",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-03 10:54:50.908123",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Research Guidance",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

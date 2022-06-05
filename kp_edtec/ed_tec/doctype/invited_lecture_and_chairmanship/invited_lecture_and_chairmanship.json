@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2021-09-20 17:38:47.631825",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "title_of_conferenceseminar",
+  "organised_by",
+  "date_of_event",
+  "level",
+  "research_score_claimed",
+  "score",
+  "column_break_8",
+  "score_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Title "
+  },
+  {
+   "fieldname": "title_of_conferenceseminar",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Title of Conference/Seminar"
+  },
+  {
+   "fieldname": "organised_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organised By"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "\nInternational (Abroad)\nInternational (within country)\nNational\nUniversity"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Score"
+  },
+  {
+   "fieldname": "date_of_event",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Event"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf Score - International (Abroad): 07, International (within country): 05, National: 03, University: 02",
+   "fieldname": "score_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Score Description",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-02 13:04:04.939555",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Invited Lecture And Chairmanship",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,32 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Student Guardian",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2022-01-12 12:47:03.118546",
+   "default_value": null,
+   "doc_type": "Student Guardian",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "guardian_name",
+   "idx": 0,
+   "modified": "2022-01-12 12:47:03.118546",
+   "modified_by": "Administrator",
+   "name": "Student Guardian-guardian_name-fetch_from",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "fetch_from",
+   "property_type": "Small Text",
+   "row_name": null,
+   "value": "guardian.guardian_name"
+  }
+ ],
+ "sync_on_migrate": 1
+}

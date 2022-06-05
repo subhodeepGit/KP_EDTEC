@@ -1,0 +1,31 @@
+{
+ "attach_print": 1,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2022-01-03 16:01:12.313484",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Student Applicant",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h3>Application status</h3>\n\n<p>Your application {{doc.name}} is successfully submitted.</p>\n\n\n<h4>----------------Student Details------------------</h4>\n\n<ul>\n<li> Student Application No: {{doc.name}}\n<li>Student Name: {{ doc.title}}\n<li>Student Email: {{ doc.student_email_id }}\n<li>Student Phone No: {{doc.student_mobile_number }}\n<li>Academic Year :{{doc.academic_year}}\n<li>Academic Term: {{doc.academic_term}}\n</ul>",
+ "modified": "2022-05-26 16:55:00.005958",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Your Application is Sucessfully Submitted",
+ "owner": "Administrator",
+ "print_format": "Student Application",
+ "recipients": [
+  {
+   "receiver_by_document_field": "student_email_id"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Notification",
+ "sender_email": "education4dmin@yandex.com",
+ "subject": "Your Application {{doc.name}}"
+}

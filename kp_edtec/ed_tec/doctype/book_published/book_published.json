@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "creation": "2021-09-20 16:35:48.449585",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "type_of_book_and_authorship",
+  "publisher_issnisbn_no",
+  "publication_type",
+  "level",
+  "column_break_6",
+  "reviewed_by_peer",
+  "no_of_co_authors",
+  "author_type",
+  "research_score_claimed",
+  "score",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Title "
+  },
+  {
+   "fieldname": "type_of_book_and_authorship",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Type of Book And Authorship"
+  },
+  {
+   "fieldname": "publisher_issnisbn_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Publisher ISSN/ISBN No"
+  },
+  {
+   "default": "0",
+   "fieldname": "reviewed_by_peer",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Reviewed by Peer"
+  },
+  {
+   "fieldname": "no_of_co_authors",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Co_Authors"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level ",
+   "options": "\nInternational\nNational"
+  },
+  {
+   "fieldname": "author_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Author Type",
+   "options": "\nMain author\nCo-author\nEditor"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "fieldname": "publication_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Publication Type",
+   "options": "\nBook\nChapter"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf Score For Books published by International Publishers: 12 per book, National Publishers: 10 per book & For\nChapter in Edited Books: 5 for single author.\n\u25cf For Joint publications - Two authors: 70 % of total value of publication for each author. For more than two authors: 70%\nof total value for First / Corresponding author and 30% of total value of publication for each the joint authors.\n\u25cf Editor of Book by International Publishers : 10, National Publishers : 08",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-02 12:46:32.736854",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Book Published",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

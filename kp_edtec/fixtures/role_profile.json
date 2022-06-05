@@ -1,0 +1,62 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-12-13 22:44:52.544054",
+  "name": "Student",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Student",
+  "roles": [
+   {
+    "parent": "Student",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Student"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-12-13 22:48:36.251237",
+  "name": "Education Administrator",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Education Administrator",
+  "roles": [
+   {
+    "parent": "Education Administrator",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Education Administartor"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-12-13 23:58:16.012231",
+  "name": "Employee Role",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Employee Role",
+  "roles": [
+   {
+    "parent": "Employee Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Instructor"
+   },
+   {
+    "parent": "Employee Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   }
+  ]
+ }
+]

@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "format:Identity Card For {programs} ({year_of_admission}-and {year_of_completion})",
+ "creation": "2022-05-26 17:40:15.152101",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "programs",
+  "academic_year",
+  "academic_term",
+  "id_card_creation_status",
+  "get_students",
+  "total_students_for_id_card",
+  "students_id_card",
+  "principal_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Current Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_card_creation_status",
+   "fieldtype": "Select",
+   "label": "ID Card Creation Status",
+   "options": "\nIn Process\nFailed\nSuccessful",
+   "read_only": 1
+  },
+  {
+   "fieldname": "get_students",
+   "fieldtype": "Button",
+   "label": "Get Students"
+  },
+  {
+   "fieldname": "total_students_for_id_card",
+   "fieldtype": "Int",
+   "label": "Total Students for ID Card",
+   "read_only": 1
+  },
+  {
+   "fieldname": "students_id_card",
+   "fieldtype": "Table",
+   "label": "Students ID Card ",
+   "options": "Student Identity Card"
+  },
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "label": "Programs",
+   "options": "Programs"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "principal_signature",
+   "fieldtype": "Attach Image",
+   "label": "Principal Signature"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-27 17:16:45.584399",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Identity Card Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,8 @@
+kp_edtec.patches.instructor_patch   # 12-01-2022 01
+kp_edtec.patches.course_enrollment_patch # 12-01-2022 01
+kp_edtec.patches.employee_patch
+kp_edtec.patches.course_schedule_patch # 12-01-2022 01
+kp_edtec.patches.student_group_patch # 12-01-2022 01
+kp_edtec.patches.exam_declaration_patch # 21-01-2022 01
+kp_edtec.patches.exam_paper_setting_patch # 21-01-2022 01
+kp_edtec.patches.student_patch

@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "autoname": "field:document_type",
+ "creation": "2021-05-13 17:04:32.031122",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type",
+  "for_category",
+  "program",
+  "document_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "unique": 1
+  },
+  {
+   "fieldname": "for_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "For Category",
+   "options": "Student Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_list",
+   "fieldtype": "Table",
+   "label": "Document List",
+   "options": "Document List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-10-08 11:48:58.527861",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Document Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

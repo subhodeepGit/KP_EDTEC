@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "MNT-ALC.-.####",
+ "creation": "2021-09-27 12:18:18.219228",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mentor",
+  "mentor_name",
+  "allocation_from",
+  "allocation_to",
+  "column_break_5",
+  "academic_year",
+  "program",
+  "semester",
+  "section_break_5",
+  "mentee_list",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "mentor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mentor",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "mentor.employee_name",
+   "fieldname": "mentor_name",
+   "fieldtype": "Data",
+   "label": "Mentor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_from",
+   "fieldtype": "Link",
+   "label": "Allocation from",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "allocation_to",
+   "fieldtype": "Link",
+   "label": "Allocation To",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mentee_list",
+   "fieldtype": "Table",
+   "label": "Mentee List",
+   "options": "Mentee List"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mentor Allocation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Programs",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Program"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "custom": 1,
+   "group": "Reference",
+   "link_doctype": "Course Schedule",
+   "link_fieldname": "mentor_allocation"
+  },
+  {
+   "custom": 1,
+   "group": "Reference",
+   "link_doctype": "Student",
+   "link_fieldname": "mentor_allocation"
+  },
+  {
+   "custom": 1,
+   "group": "Reference",
+   "link_doctype": "Student Group",
+   "link_fieldname": "mentor_allocation"
+  }
+ ],
+ "modified": "2021-12-22 16:17:27.568556",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Mentor Allocation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

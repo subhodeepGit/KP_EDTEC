@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "creation": "2021-09-21 14:38:53.891182",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "programs",
+  "semester",
+  "student_admission",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_program_priority"
+ ],
+ "fields": [
+  {
+   "fieldname": "student_admission",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Student Admission",
+   "options": "Student Admission"
+  },
+  {
+   "description": "Click on the top right arrow (v) button or outside of the table to go back...",
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student_admission.semester",
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Semester",
+   "options": "Program"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Parent",
+   "options": "Program Priority"
+  },
+  {
+   "fieldname": "parent_program_priority",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Parent Program Priority",
+   "options": "Program Priority"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-05-30 17:24:01.936509",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Program Priority",
+ "nsm_parent_field": "parent_program_priority",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

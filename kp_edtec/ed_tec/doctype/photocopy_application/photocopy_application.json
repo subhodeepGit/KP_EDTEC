@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "autoname": "PHT-APP-.#####",
+ "creation": "2021-05-28 01:04:17.075463",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "application_date",
+  "status",
+  "student",
+  "student_name",
+  "roll_no",
+  "registration_number",
+  "exam_declaration",
+  "exam_name",
+  "post_exam_declaration",
+  "section_break_5",
+  "photocopy_item",
+  "total_fees",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "exam_declaration",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Exam Declaration",
+   "options": "Exam Declaration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "photocopy_item",
+   "fieldtype": "Table",
+   "label": "Photocopy Item",
+   "options": "Photocopy Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Photocopy Application",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fees",
+   "fieldtype": "Currency",
+   "label": "Total Fees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "post_exam_declaration",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Post Exam Declaration",
+   "options": "Post Exam Declaration",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nSubmitted\nPhotocopy Uploaded\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "exam_declaration.exam_name",
+   "fieldname": "exam_name",
+   "fieldtype": "Data",
+   "label": "Exam Name",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "student.roll_no",
+   "fieldname": "roll_no",
+   "fieldtype": "Data",
+   "label": "Roll No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.permanant_registration_number",
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": " Registration Number",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-04-27 17:17:01.785412",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Photocopy Application",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

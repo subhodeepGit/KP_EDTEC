@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2021-09-20 16:22:33.356822",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "book_title",
+  "issnisbn_no",
+  "reviewed_by_peer",
+  "no_of_co_authors",
+  "main_author",
+  "score"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "book_title",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Book Title "
+  },
+  {
+   "fieldname": "issnisbn_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ISSN/ISBN No"
+  },
+  {
+   "default": "0",
+   "fieldname": "reviewed_by_peer",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Reviewed by Peer"
+  },
+  {
+   "fieldname": "no_of_co_authors",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Co_Authors"
+  },
+  {
+   "fieldname": "main_author",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Main Author"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-25 13:07:45.659914",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Article And Chapters Published",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

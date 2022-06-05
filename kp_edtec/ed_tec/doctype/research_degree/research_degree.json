@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "creation": "2021-09-25 12:25:45.354119",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "degree",
+  "title",
+  "date_of_award",
+  "university"
+ ],
+ "fields": [
+  {
+   "fieldname": "degree",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Degree",
+   "options": "\nM.Phil\nPh.D / D.Phil\nD.Sc / D.Lit"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "date_of_award",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Award"
+  },
+  {
+   "fieldname": "university",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "University"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-25 12:27:06.972202",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Research Degree",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

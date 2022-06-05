@@ -1,0 +1,79 @@
+[
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Fee Type",
+  "modified": "2022-02-05 15:32:21.939822",
+  "name": "Counselling Fees",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "Counselling Fees"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Fee Type",
+  "modified": "2022-02-05 17:24:47.429053",
+  "name": "Exam Fees",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "Exam Fees"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Fee Type",
+  "modified": "2022-02-07 12:01:08.663605",
+  "name": "Hostel Fees",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "Hostel Fees"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Fee Type",
+  "modified": "2022-03-14 16:56:08.056736",
+  "name": "Student Exchange Application Fees",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "Student Exchange Application Fees"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Fee Type",
+  "modified": "2022-03-14 17:03:13.983055",
+  "name": "Mess Fees",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "Mess Fees"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Fee Type",
+  "modified": "2022-03-14 17:13:56.030186",
+  "name": "Post Exam Fees",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "Post Exam Fees"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Fee Type",
+  "modified": "2022-03-14 17:15:22.516390",
+  "name": "Admission Fees",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "type": "Admission Fees"
+ }
+]

@@ -1,0 +1,63 @@
+<head>
+	<style>
+	 input.final_marks:invalid {
+			border: 0.2px solid red;
+	}
+	input.earned_credits:invalid {
+			border: 0.2px solid red;
+	}
+	</style>
+</head>
+<table class="table table-bordered continuous-evaluation-tool">
+	<thead>
+		<tr>
+			<th style="width: 9%">Student Name</th>
+			<th style="width: 9%">Student Id</th>
+			<th style="width: 7%">Roll Number</th>
+			<th style="width: 9%">Registration Number</th>
+			<th style="width: 20%">Course Wise Evaluation</th>
+			<th style="width: 5%">Grace Marks</th>
+			<th style="width: 7%">Weightage Marks</th>
+			<th style="width: 8%">Final Marks</th>
+			<th style="width: 5%">Earned Credits</th>
+			<th style="width: 5%">Total Credits</th>
+			<th style="width: 8%">Out of Marks</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for s in students %}
+		<tr>
+			<td>{{ s.student_name }}</td>
+			<td>{{ s.student }}</td>
+			<td>{{ s.roll_no }}</td>
+			<td>{{ s.registration_number }}</i></td>
+			<td>
+				<table>
+					<thead>
+						<tr>
+							<th style="width:2.8%">ID</th>
+							<th style="width: 6%">Earned Marks/Total Marks</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						{% for row in s.rows %}
+						<tr>
+							<td>{{ row.name }}</td>
+							<td>{{ row.earned_marks }} / {{row.total_marks}}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</td>
+			<td><input type="number" 	 class="grace_marks"  data-row="{{s.student}}"	style="width:100%;" disabled></td>
+			<td><input type="number" 	 class="weightage_marks"  data-row="{{s.student}}"	style="width:100%;" disabled value="{{s.weightage_marks}}"></td>
+			<td><input type="number" 	 class="final_marks"  data-row="{{s.student}}"	style="width:100%;" disabled value="{{s.weightage_marks}}"></td>
+			<td><input type="number" 	 class="earned_credits"  data-row="{{s.student}}"	style="width:100%;" disabled value="{{s.total_credits}}"></td>
+			<td><input type="number" 	 class="total_credits"  data-row="{{s.student}}"	style="width:100%;" disabled value="{{s.total_credits}}"></td>
+			<td><input type="number" 	 class="out_of_marks"  data-row="{{s.student}}"	style="width:100%;" disabled value="{{s.out_of_marks}}"></td>
+
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

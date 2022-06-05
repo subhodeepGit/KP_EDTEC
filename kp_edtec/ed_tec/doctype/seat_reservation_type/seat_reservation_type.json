@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "autoname": "field:reservation_name",
+ "creation": "2021-10-21 15:49:34.321036",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reservation_name",
+  "award_winner",
+  "physically_disabled",
+  "seat_reservations_category_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "reservation_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reservation Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "seat_reservations_category_item",
+   "fieldtype": "Table",
+   "label": "Seat Reservations category Item",
+   "options": "Seat Reservations category Item",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "physically_disabled",
+   "fieldtype": "Check",
+   "label": "Physically Disabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "award_winner",
+   "fieldtype": "Check",
+   "label": "Award Winner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-06 20:22:07.647434",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Seat Reservation Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

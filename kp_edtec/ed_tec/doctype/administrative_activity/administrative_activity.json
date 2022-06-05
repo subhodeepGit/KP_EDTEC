@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "creation": "2021-11-09 14:41:10.963265",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_job",
+  "responsibility",
+  "from",
+  "to",
+  "duration",
+  "score",
+  "column_break_7",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_job",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Of Job"
+  },
+  {
+   "fieldname": "responsibility",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Responsibility"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Time"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": " To Time"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Duration "
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grading"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf Good- Involved in at least 3 activities.\n\u25cf Satisfactory- Involved in 1-2 activities.\n\u25cf Not Satisfactory- Not involved in any of the activity. ",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-02 12:47:53.437766",
+ "modified_by": "Administrator",
+ "module": "ED_TEC",
+ "name": "Administrative Activity",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
