@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "autoname": "STU-ADM.-.#####",
+ "creation": "2021-04-11 16:47:59.914026",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "registration_no",
+  "student_roll_no",
+  "student_name",
+  "roll_no",
+  "fathers_name",
+  "current_program",
+  "column_break_6",
+  "permanant_registration_number",
+  "photo",
+  "academic_year",
+  "academic_term",
+  "section_break_9",
+  "courses",
+  "section_break_11",
+  "signature_of_principal",
+  "column_break_13",
+  "examiner_signature",
+  "signature_of_examiner"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration_no",
+   "fieldtype": "Link",
+   "label": "Enrollment No.",
+   "options": "Program Enrollment",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "registration_no.student",
+   "fieldname": "student_roll_no",
+   "fieldtype": "Link",
+   "label": "Student Roll No",
+   "options": "Student",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "registration_no.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Father's Name"
+  },
+  {
+   "fetch_from": "registration_no.programs",
+   "fieldname": "current_program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Current Program",
+   "options": "Programs",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "registration_no.academic_year",
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "registration_no.academic_term",
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Courses Offered"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signature_of_principal",
+   "fieldtype": "Signature",
+   "label": "Signature of Principal"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "examiner_signature",
+   "fieldtype": "Signature",
+   "label": "Examiner Signature"
+  },
+  {
+   "fieldname": "courses",
+   "fieldtype": "Table",
+   "label": "Courses",
+   "options": "Admit Card Course",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student_roll_no.image",
+   "fieldname": "photo",
+   "fieldtype": "Attach",
+   "label": "Photo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "registration_no.permanant_registration_number",
+   "fieldname": "permanant_registration_number",
+   "fieldtype": "Data",
+   "label": "Permanant Registration Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "registration_no.roll_no",
+   "fieldname": "roll_no",
+   "fieldtype": "Data",
+   "label": "Roll No",
+   "read_only": 1
+  },
+  {
+   "default": "/files/COE_Sign-removebg-preview.png",
+   "fieldname": "signature_of_examiner",
+   "fieldtype": "Attach",
+   "label": "Signature"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-27 17:00:57.807003",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Student Admit Card",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

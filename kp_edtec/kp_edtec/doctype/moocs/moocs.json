@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "creation": "2021-10-12 13:26:20.621440",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "description",
+  "organisation",
+  "level",
+  "url_link",
+  "research_score_claimed",
+  "score",
+  "column_break_7",
+  "score_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "description",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Description",
+   "options": "\nDevelopment of complete MOOCs in 4 quadrants\nMOOCs (developed in 4 quadrant) per Module/Lecture\nContent writer / Subject matter expert for each module of MOOCs\nCourse co-ordiantor for MOOCs"
+  },
+  {
+   "fieldname": "organisation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organisation"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "\nPG\nUG"
+  },
+  {
+   "fieldname": "url_link",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "URL Link"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf Score for development of complete MOOCs in 4 quadrants : 20,Credit: 05 ,Module:05\n\u25cf Score for Content writer/Subject expert : 02/module\n\u25cf Score for Course co-coordinator : 08/ Course & 02/credit for at least one quadrant",
+   "fieldname": "score_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Score Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "migration_hash": "46777f2f87d9a7d5466453a4c7498841",
+ "modified": "2022-02-14 18:51:38.957198",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "MOOCs",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-25 00:29:51.104986",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "programs",
+  "semester",
+  "course",
+  "course_code",
+  "course_name",
+  "cr",
+  "gr"
+ ],
+ "fields": [
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Semester",
+   "options": "Program"
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course",
+   "options": "Course"
+  },
+  {
+   "fieldname": "course_code",
+   "fieldtype": "Data",
+   "label": "Course Code"
+  },
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "cr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CR"
+  },
+  {
+   "fieldname": "gr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "GR"
+  },
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-27 14:15:52.265631",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Cummulative Courses Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

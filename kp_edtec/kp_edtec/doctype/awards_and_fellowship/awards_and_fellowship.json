@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "creation": "2021-10-11 14:35:08.979621",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_award_or_fellowship",
+  "awarding_agency",
+  "date_of_award",
+  "level",
+  "research_score_claimed",
+  "score",
+  "column_break_7",
+  "score_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_award_or_fellowship",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Name of Award or Fellowship"
+  },
+  {
+   "fieldname": "awarding_agency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Awarding Agency"
+  },
+  {
+   "fieldname": "date_of_award",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Award"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "\nInternational\nNational"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf Score for award/fellowship- International: 07 National: 05",
+   "fieldname": "score_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Score Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "migration_hash": "f944a41b249a5d7cff0346d60a4e5fd7",
+ "modified": "2022-02-15 00:12:57.027036",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Awards and Fellowship",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

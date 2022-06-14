@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2021-10-09 19:28:52.745448",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "brief_description",
+  "patent_field__obtained",
+  "date_of_award",
+  "patent_no",
+  "level",
+  "research_score_claimed",
+  "score",
+  "column_break_8",
+  "score_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "brief_description",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Brief Description"
+  },
+  {
+   "fieldname": "patent_field__obtained",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patent Field / Obtained"
+  },
+  {
+   "fieldname": "date_of_award",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Award"
+  },
+  {
+   "fieldname": "patent_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patent No"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level ",
+   "options": "\nInternational\nNational"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf Score for Patent obtained - International: 10 ,National : 07",
+   "fieldname": "score_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Score Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "migration_hash": "af5c8448d71ce8b1afe070019c36d67b",
+ "modified": "2022-02-15 12:34:24.504339",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Patent",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

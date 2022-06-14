@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.application_status==\"Applied\"",
+ "creation": "2022-01-03 15:59:39.981888",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Student Applicant",
+ "enabled": 0,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h3>Application status</h3>\n\n<p>Your application {{doc.name}} is successfully submitted.</p>\n\n\n<h4>----------------Student Details------------------</h4>\n\n<ul>\n<li> Student Application No: {{doc.name}}\n<li>Student Name: {{ doc.title}}\n<li>Student Email: {{ doc.student_email_id }}\n<li>Student Phone No: {{doc.student_mobile_number }}\n<li>Academic Year :{{doc.academic_year}}\n<li>Academic Term: {{doc.academic_term}}\n</ul>",
+ "modified": "2022-01-03 15:59:47.156255",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Your Application is Submitted",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "student_email_id"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender_email": "hello@bizmap.in",
+ "subject": "Your application {{doc.name}} is successfully submitted.",
+ "value_changed": "application_status"
+}

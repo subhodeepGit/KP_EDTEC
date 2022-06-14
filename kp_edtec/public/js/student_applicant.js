@@ -18,7 +18,7 @@ frappe.ui.form.on('Student Applicant', {
         });
         frm.fields_dict['program_priority'].grid.get_field('programs').get_query = function(doc, cdt, cdn) {
             return {   
-                query: 'kp_edtec.ed_tec.doctype.student_applicant.filter_programs_by_department', 
+                query: 'kp_edtec.kp_edtec.doctype.student_applicant.filter_programs_by_department', 
                 filters:{
                     "department":frm.doc.department,
                     "program_grade":frm.doc.program_grade
@@ -143,7 +143,7 @@ frappe.ui.form.on('Student Applicant', {
 			
         }
         frappe.call({
-            method: "kp_edtec.ed_tec.doctype.student_applicant.get_qualification_list",
+            method: "kp_edtec.kp_edtec.doctype.student_applicant.get_qualification_list",
             callback: function(r) {
                 cur_frm.doc.education_qualifications_details.forEach(data=>{
                     var df = frappe.meta.get_docfield("Education Qualifications Details","qualification_", data.name);
@@ -156,7 +156,7 @@ frappe.ui.form.on('Student Applicant', {
         
         // set Sharing Types 
         frappe.call({
-            method: "kp_edtec.ed_tec.doctype.student_applicant.get_sharing_type",
+            method: "kp_edtec.kp_edtec.doctype.student_applicant.get_sharing_type",
             callback: function(r) {
                 frm.set_df_property('sharing', 'options', r.message);
             }
@@ -177,7 +177,7 @@ frappe.ui.form.on('Student Applicant', {
     },
     enroll_student: function(frm) {
 		frappe.model.open_mapped_doc({
-			method: "kp_edtec.ed_tec.doctype.student_applicant.enroll_student",
+			method: "kp_edtec.kp_edtec.doctype.student_applicant.enroll_student",
 			frm: frm
 		})
 	},
@@ -185,7 +185,7 @@ frappe.ui.form.on('Student Applicant', {
         if (frm.doc.name && frm.doc.application_status=="Approved"){
             frm.add_custom_button(__("Fees"), function() {
                 frappe.model.open_mapped_doc({
-                    method: "kp_edtec.ed_tec.doctype.student_applicant.create_fees",
+                    method: "kp_edtec.kp_edtec.doctype.student_applicant.create_fees",
                     frm: frm,
                 });
             })
@@ -217,7 +217,7 @@ frappe.ui.form.on('Student Applicant', {
     //     frm.set_value("counselling_structure",'');
     //     if (frm.doc.program_grade && frm.doc.academic_year && frm.doc.department){
     //         frappe.call({
-    //             method: "ed_tec.ed_tec.doctype.student_applicant.get_counselling_structure",
+    //             method: "kp_edtec.kp_edtec.doctype.student_applicant.get_counselling_structure",
     //             args:{
     //                program_grade: frm.doc.program_grade,
     //                academic_year: frm.doc.academic_year,
@@ -259,7 +259,7 @@ frappe.ui.form.on('Student Applicant', {
         if (!frm.doc.counselling_structure && frm.doc.student_category && (frm.doc.program_priority).length!=0){
             frm.set_value("education_qualifications_details",[]);
             frappe.call({
-                method: "kp_edtec.ed_tec.doctype.student_applicant.get_education_qualifications_details_by_admissions",
+                method: "kp_edtec.kp_edtec.doctype.student_applicant.get_education_qualifications_details_by_admissions",
                 args:{
                     student_category: frm.doc.student_category,
                     admission:  frm.doc.program_priority
@@ -330,7 +330,7 @@ frappe.ui.form.on("Program Priority", "programs", function(frm, cdt, cdn) {
     }
     if (d.programs){
         frappe.call({
-            method: "kp_edtec.ed_tec.doctype.student_applicant.get_admission_and_semester_by_program",
+            method: "kp_edtec.kp_edtec.doctype.student_applicant.get_admission_and_semester_by_program",
             args: {
                programs:d.programs,
                program_grade:frm.doc.program_grade,
@@ -352,7 +352,7 @@ frappe.ui.form.on("Program Priority", "programs", function(frm, cdt, cdn) {
                     if (!frm.doc.counselling_structure && frm.doc.student_category && (frm.doc.program_priority).length!=0){
                         frm.set_value("education_qualifications_details",[]);
                         frappe.call({
-                            method: "kp_edtec.ed_tec.doctype.student_applicant.get_education_qualifications_details_by_admissions",
+                            method: "kp_edtec.kp_edtec.doctype.student_applicant.get_education_qualifications_details_by_admissions",
                             args:{
                                 student_category: frm.doc.student_category,
                                 admission:  frm.doc.program_priority

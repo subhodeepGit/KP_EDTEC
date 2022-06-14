@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MRGCRT.-.#####",
+ "creation": "2021-12-15 19:39:24.711367",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "roll_no",
+  "permanant_registration_number",
+  "programs",
+  "academic_year",
+  "date",
+  "place"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.permanant_registration_number",
+   "fieldname": "permanant_registration_number",
+   "fieldtype": "Data",
+   "label": "Permanant Registration Number"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.roll_no",
+   "fieldname": "roll_no",
+   "fieldtype": "Data",
+   "label": "Roll No",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-19 13:13:21.176883",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Migration Certificate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

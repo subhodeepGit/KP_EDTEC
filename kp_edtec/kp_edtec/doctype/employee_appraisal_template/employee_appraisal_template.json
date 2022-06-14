@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:kra_title",
+ "creation": "2021-09-27 19:16:14.873375",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "kra_title",
+  "description",
+  "section_break_3",
+  "teaching_activity",
+  "examination_duties",
+  "administrative_activity",
+  "co_curricular_extension_professional_development",
+  "published_paper",
+  "article_and_chapters_publishedc",
+  "book_published",
+  "translation_work",
+  "ict_mediated_teaching_learning_pedagogy_and_content",
+  "design_of_new_curriculum_and_course",
+  "moocs",
+  "e_content",
+  "research_guidance",
+  "research_project_and_consultancies",
+  "patent",
+  "policy_document",
+  "awards_and_fellowship",
+  "invited_lecture_and_chairmanship",
+  "column_break_12",
+  "additional_resources",
+  "innovative_teaching_learning",
+  "seminars_and_guest_lecture",
+  "conference__proceedings",
+  "instructor_development_program",
+  "paper_presented"
+ ],
+ "fields": [
+  {
+   "fieldname": "kra_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Appraisal Template Title",
+   "oldfieldname": "kra_title",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "oldfieldname": "description",
+   "oldfieldtype": "Small Text",
+   "print_width": "300px",
+   "width": "300px"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "teaching_activity",
+   "fieldtype": "Check",
+   "label": "Teaching Activity"
+  },
+  {
+   "default": "0",
+   "fieldname": "seminars_and_guest_lecture",
+   "fieldtype": "Check",
+   "label": "Seminars And Guest Lecture"
+  },
+  {
+   "default": "0",
+   "fieldname": "additional_resources",
+   "fieldtype": "Check",
+   "label": "Additional Resources"
+  },
+  {
+   "default": "0",
+   "fieldname": "examination_duties",
+   "fieldtype": "Check",
+   "label": "Examination Duties"
+  },
+  {
+   "default": "0",
+   "fieldname": "innovative_teaching_learning",
+   "fieldtype": "Check",
+   "label": "Innovative Teaching Learning"
+  },
+  {
+   "default": "0",
+   "fieldname": "co_curricular_extension_professional_development",
+   "fieldtype": "Check",
+   "label": "Student & Co_Curricular Extension Professional Development"
+  },
+  {
+   "default": "0",
+   "fieldname": "published_paper",
+   "fieldtype": "Check",
+   "label": "Published Paper"
+  },
+  {
+   "default": "0",
+   "fieldname": "article_and_chapters_publishedc",
+   "fieldtype": "Check",
+   "label": "Article And Chapters Publishedc"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break",
+   "label": "Extra Components"
+  },
+  {
+   "default": "0",
+   "fieldname": "conference__proceedings",
+   "fieldtype": "Check",
+   "label": "Conference  Proceedings"
+  },
+  {
+   "default": "0",
+   "fieldname": "book_published",
+   "fieldtype": "Check",
+   "label": "Book Published"
+  },
+  {
+   "default": "0",
+   "fieldname": "research_project_and_consultancies",
+   "fieldtype": "Check",
+   "label": "Research Project And Consultancies"
+  },
+  {
+   "default": "0",
+   "fieldname": "research_guidance",
+   "fieldtype": "Check",
+   "label": "Research Guidance"
+  },
+  {
+   "default": "0",
+   "fieldname": "instructor_development_program",
+   "fieldtype": "Check",
+   "label": "Instructor Development Program"
+  },
+  {
+   "default": "0",
+   "fieldname": "paper_presented",
+   "fieldtype": "Check",
+   "label": "Paper Presented"
+  },
+  {
+   "default": "0",
+   "fieldname": "invited_lecture_and_chairmanship",
+   "fieldtype": "Check",
+   "label": "Invited Lecture And Chairmanship"
+  },
+  {
+   "default": "0",
+   "fieldname": "patent",
+   "fieldtype": "Check",
+   "label": "Patent"
+  },
+  {
+   "default": "0",
+   "fieldname": "awards_and_fellowship",
+   "fieldtype": "Check",
+   "label": "Awards and Fellowship"
+  },
+  {
+   "default": "0",
+   "fieldname": "policy_document",
+   "fieldtype": "Check",
+   "label": "Policy Document"
+  },
+  {
+   "default": "0",
+   "fieldname": "translation_work",
+   "fieldtype": "Check",
+   "label": "Translation Work"
+  },
+  {
+   "default": "0",
+   "fieldname": "design_of_new_curriculum_and_course",
+   "fieldtype": "Check",
+   "label": "Design of New Curriculum and Course"
+  },
+  {
+   "default": "0",
+   "fieldname": "moocs",
+   "fieldtype": "Check",
+   "label": "MOOCs"
+  },
+  {
+   "default": "0",
+   "fieldname": "e_content",
+   "fieldtype": "Check",
+   "label": "E_Content"
+  },
+  {
+   "default": "0",
+   "fieldname": "administrative_activity",
+   "fieldtype": "Check",
+   "label": "Administrative Activity"
+  },
+  {
+   "default": "0",
+   "fieldname": "ict_mediated_teaching_learning_pedagogy_and_content",
+   "fieldtype": "Check",
+   "label": "ICT MEDIATED TEACHING LEARNING PEDAGOGY AND CONTENT"
+  }
+ ],
+ "icon": "icon-file-text",
+ "links": [],
+ "modified": "2022-02-17 17:49:39.819167",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Employee Appraisal Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

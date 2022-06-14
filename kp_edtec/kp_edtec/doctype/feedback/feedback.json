@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "creation": "2021-04-10 23:33:16.620972",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feedback_for",
+  "student",
+  "student_name",
+  "date",
+  "programs",
+  "column_break_4",
+  "program",
+  "student_group",
+  "faculty",
+  "hostel_details_section",
+  "building",
+  "room",
+  "hostel_feedback_question",
+  "remark",
+  "instructor_feedback_section",
+  "feedback_questions",
+  "remark_for_instructor"
+ ],
+ "fields": [
+  {
+   "depends_on": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "depends_on": "eval:doc.feedback_for=='Instructor'",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "depends_on": "eval:doc.feedback_for=='Instructor'",
+   "fieldname": "faculty",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "Instructor"
+  },
+  {
+   "depends_on": "eval:doc.feedback_for=='Instructor'",
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "label": "Programs ",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.feedback_for=='Instructor'",
+   "fieldname": "student_group",
+   "fieldtype": "Link",
+   "label": "Student Group",
+   "options": "Student Group"
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback_for",
+   "fieldtype": "Select",
+   "label": "Feedback For",
+   "options": "\nInstructor\nHostel",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.feedback_for=='Hostel'",
+   "fieldname": "hostel_details_section",
+   "fieldtype": "Section Break",
+   "label": "Hostel Details"
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "label": "Building",
+   "options": "Building"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room ",
+   "options": "Room"
+  },
+  {
+   "fieldname": "hostel_feedback_question",
+   "fieldtype": "Attach",
+   "label": "Hostel Feedback Question"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Text",
+   "label": "Remark For Hostel"
+  },
+  {
+   "depends_on": "eval:doc.feedback_for=='Instructor'",
+   "fieldname": "instructor_feedback_section",
+   "fieldtype": "Section Break",
+   "label": "Instructor Feedback"
+  },
+  {
+   "fieldname": "feedback_questions",
+   "fieldtype": "Attach",
+   "label": "Feedback Questions"
+  },
+  {
+   "fieldname": "remark_for_instructor",
+   "fieldtype": "Text",
+   "label": "Remark For Instructor"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-16 10:46:47.734845",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Feedback",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -11,7 +11,7 @@ frappe.ui.form.on('Course', {
 	disable:function(frm){
         if(frm.doc.disable == 1){
         	frappe.call({
-				method: "kp_edtec.ed_tec.doctype.course.check_for_semester",
+				method: "kp_edtec.kp_edtec.doctype.course.check_for_semester",
 				args:{
 					"course":frm.doc.name
 				},
@@ -55,7 +55,7 @@ frappe.ui.form.on('Course', {
 				],
 				function(data) {
 					frappe.call({
-						method: 'kp_edtec.ed_tec.doctype.course.add_course_to_programs',
+						method: 'kp_edtec.kp_edtec.doctype.course.add_course_to_programs',
 						args: {
 							'course': frm.doc.name,
 							'programs': data.programs,
@@ -80,7 +80,7 @@ frappe.ui.form.on('Course', {
 let get_semester_without_course = function(course) {
 	return frappe.call({
 		args:{"course":course},
-		method: 'kp_edtec.ed_tec.doctype.course.get_semesters_name',
+		method: 'kp_edtec.kp_edtec.doctype.course.get_semesters_name',
 	});
 }
 // frappe.ui.form.on("Course Credit", "lectures", function(frm, cdt, cdn) {

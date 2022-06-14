@@ -65,7 +65,7 @@ frappe.ui.form.on('Student Attendance Tool', {
 		dialog.show();
     },
 	building:function(frm){
-		var method = "kp_edtec.ed_tec.doctype.student_attendance_tool.get_student_records";
+		var method = "kp_edtec.kp_edtec.doctype.student_attendance_tool.get_student_records";
 		frm.set_df_property('attendance', 'depends_on','eval: (doc.course_schedule || (doc.student_group && doc.date) || doc.date)');
 		frappe.call({
 			method: method,

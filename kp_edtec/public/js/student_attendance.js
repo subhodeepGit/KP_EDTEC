@@ -3,7 +3,7 @@ frappe.ui.form.on('Student Attendance',{
         frm.set_query("student", function() {
             if (frm.doc.attendance_for == 'Hosteler'){
                 return {
-                    query: 'kp_edtec.ed_tec.doctype.student_attendance.get_hostel_students',
+                    query: 'kp_edtec.kp_edtec.doctype.student_attendance.get_hostel_students',
                     filters: {
                         "is_hosteller":1,
                         "deallotment":0
@@ -26,7 +26,7 @@ frappe.ui.form.on('Student Attendance',{
             });
             frm.set_query("course", function() {
                 return {
-                    query: 'kp_edtec.ed_tec.doctype.student_attendance.get_course',
+                    query: 'kp_edtec.kp_edtec.doctype.student_attendance.get_course',
                     filters: {
                         "student":frm.doc.student
                     }
@@ -38,7 +38,7 @@ frappe.ui.form.on('Student Attendance',{
                         args: {
                         "student":frm.doc.student
                         },
-                        method: "kp_edtec.ed_tec.doctype.student_attendance.get_student_details",
+                        method: "kp_edtec.kp_edtec.doctype.student_attendance.get_student_details",
                         callback: function(r) { 
                             if(r.message){
                                 frm.set_value("building",r.message["building"])

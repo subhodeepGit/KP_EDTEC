@@ -59,7 +59,7 @@ doctype_js = {
             }
 
 doctype_list_js = {
-    "Branch Sliding Application": "kp_edtec/ed_tec/doctype/branch_sliding_application/branch_sliding_application_list.js",
+    "Branch Sliding Application": "kp_edtec/kp_edtec/doctype/branch_sliding_application/branch_sliding_application_list.js",
     "Fees":"public/js/fees_list.js",
     "Student Attendance":"public/js/student_attendance_list.js"
 }
@@ -72,7 +72,7 @@ after_migrate = [
         'kp_edtec.patches.migrate_patch.set_translation',
         'kp_edtec.patches.migrate_patch.add_roles',
         'kp_edtec.patches.migrate_patch.set_custom_role_permission',
-        'kp_edtec.ed_tec.delete_doc_if_linked.execute'
+        'kp_edtec.kp_edtec.delete_doc_if_linked.execute'
 ]
 
 # fixtures = [
@@ -145,155 +145,155 @@ after_install = "kp_edtec.patches.get_phone_codes.execute"
 
 doc_events = {
     "Academic Calender": {
-        "validate": "kp_edtec.ed_tec.validations.academic_calender.validate"
+        "validate": "kp_edtec.kp_edtec.validations.academic_calender.validate"
     },
     "Academic Calendar Template": {
-        "validate": "kp_edtec.ed_tec.validations.academic_calender_template.validate"
+        "validate": "kp_edtec.kp_edtec.validations.academic_calender_template.validate"
     },
     "Branch sliding Declaration": {
-        "validate": "kp_edtec.ed_tec.validations.branch_sliding_declaration.validate"
+        "validate": "kp_edtec.kp_edtec.validations.branch_sliding_declaration.validate"
     },
     "Branch Sliding Application": {
-        "validate": "kp_edtec.ed_tec.validations.branch_sliding_application.validate"
+        "validate": "kp_edtec.kp_edtec.validations.branch_sliding_application.validate"
     },
     "Course": {
-        "validate": ["kp_edtec.ed_tec.validations.course.validate",
-                     "kp_edtec.ed_tec.doctype.course.validate"]
+        "validate": ["kp_edtec.kp_edtec.validations.course.validate",
+                     "kp_edtec.kp_edtec.doctype.course.validate"]
     },
     "Course Assessment": {
-        "validate": "kp_edtec.ed_tec.validations.course_assessment.validate"
+        "validate": "kp_edtec.kp_edtec.validations.course_assessment.validate"
     },
     "Course Assessment Result": {
-        "validate": "kp_edtec.ed_tec.validations.course_assessment_result.validate"
+        "validate": "kp_edtec.kp_edtec.validations.course_assessment_result.validate"
     },
     "Course Enrollment":{
-       "after_insert":"kp_edtec.ed_tec.doctype.course_enrollment.after_insert",
-       "validate":"kp_edtec.ed_tec.doctype.course_enrollment.validate",
-       "on_trash":"kp_edtec.ed_tec.doctype.course_enrollment.on_trash"
+       "after_insert":"kp_edtec.kp_edtec.doctype.course_enrollment.after_insert",
+       "validate":"kp_edtec.kp_edtec.doctype.course_enrollment.validate",
+       "on_trash":"kp_edtec.kp_edtec.doctype.course_enrollment.on_trash"
     },
 	"Course Schedule": {
-		"on_update": "kp_edtec.ed_tec.doctype.course_schedule.on_change",
-        "validate": "kp_edtec.ed_tec.validations.course_schedule.validate"
+		"on_update": "kp_edtec.kp_edtec.doctype.course_schedule.on_change",
+        "validate": "kp_edtec.kp_edtec.validations.course_schedule.validate"
 	},
     "Counselling Structure":{
-        "validate":"kp_edtec.ed_tec.validations.counselling_structure.validate"
+        "validate":"kp_edtec.kp_edtec.validations.counselling_structure.validate"
     },
     "Exam Assessment Plan": {
-        "validate": "kp_edtec.ed_tec.validations.exam_assesment_plan.validate"
+        "validate": "kp_edtec.kp_edtec.validations.exam_assesment_plan.validate"
     },
     "Exam Application":{
-        "validate":"kp_edtec.ed_tec.validations.exam_application.validate"
+        "validate":"kp_edtec.kp_edtec.validations.exam_application.validate"
     },
     "Exam Declaration":{
-        "validate":"kp_edtec.ed_tec.validations.exam_declaration.validate"
+        "validate":"kp_edtec.kp_edtec.validations.exam_declaration.validate"
     },
     "Exchange Program Declaration":{
-        "validate":"kp_edtec.ed_tec.validations.exchange_program_declaration.validate"
+        "validate":"kp_edtec.kp_edtec.validations.exchange_program_declaration.validate"
     },
     "Exam Paper Setting":{
-        "validate":"kp_edtec.ed_tec.validations.exam_paper_setting.validate"
+        "validate":"kp_edtec.kp_edtec.validations.exam_paper_setting.validate"
     },
     "Fees":{
-        "on_submit":"kp_edtec.ed_tec.doctype.fees.on_submit",
-        "validate":"kp_edtec.ed_tec.doctype.fees.validate",
-        "on_cancel":"kp_edtec.ed_tec.doctype.fees.on_cancel"
+        "on_submit":"kp_edtec.kp_edtec.doctype.fees.on_submit",
+        "validate":"kp_edtec.kp_edtec.doctype.fees.validate",
+        "on_cancel":"kp_edtec.kp_edtec.doctype.fees.on_cancel"
     },
     "Fee Structure":{
-        "validate":"kp_edtec.ed_tec.validations.fee_structure.validate"
+        "validate":"kp_edtec.kp_edtec.validations.fee_structure.validate"
     },
     "Feedback":{
-        "validate":"kp_edtec.ed_tec.validations.feedback.validate"
+        "validate":"kp_edtec.kp_edtec.validations.feedback.validate"
     },
     "Fee Schedule":{
-        "validate":"kp_edtec.ed_tec.validations.fee_schedule.validate"
+        "validate":"kp_edtec.kp_edtec.validations.fee_schedule.validate"
     },
     "Final Result Declaration":{
-        "validate":"kp_edtec.ed_tec.validations.final_result_declaration.validate"
+        "validate":"kp_edtec.kp_edtec.validations.final_result_declaration.validate"
     },
     "Instructor":{
-        "validate":["kp_edtec.ed_tec.doctype.instructor.validate",
-        "kp_edtec.ed_tec.validations.instructor.validate"],
-        "on_trash":"kp_edtec.ed_tec.doctype.instructor.on_trash"
+        "validate":["kp_edtec.kp_edtec.doctype.instructor.validate",
+        "kp_edtec.kp_edtec.validations.instructor.validate"],
+        "on_trash":"kp_edtec.kp_edtec.doctype.instructor.on_trash"
     },
     "Mentor Allocation": {
-        "validate": "kp_edtec.ed_tec.validations.mentor_allocation.validate"
+        "validate": "kp_edtec.kp_edtec.validations.mentor_allocation.validate"
     },
     "Placement Drive":{
-        "validate":"kp_edtec.ed_tec.validations.placement_drive.validate"
+        "validate":"kp_edtec.kp_edtec.validations.placement_drive.validate"
     },
     "Placement Drive Application":{
-        "validate":"kp_edtec.ed_tec.validations.placement_drive_application.validate"
+        "validate":"kp_edtec.kp_edtec.validations.placement_drive_application.validate"
     },
     "Photocopy Application":{
-        "validate":"kp_edtec.ed_tec.validations.photocopy_application.validate"
+        "validate":"kp_edtec.kp_edtec.validations.photocopy_application.validate"
     },
     "Post Exam Declaration":{
-        "validate":"kp_edtec.ed_tec.validations.post_exam_declaration.validate"
+        "validate":"kp_edtec.kp_edtec.validations.post_exam_declaration.validate"
     },
     "Program":{
-        "after_insert":"kp_edtec.ed_tec.doctype.program.after_insert",
-        "validate":"kp_edtec.ed_tec.doctype.program.validate",
-        "on_trash":"kp_edtec.ed_tec.doctype.program.on_trash"
+        "after_insert":"kp_edtec.kp_edtec.doctype.program.after_insert",
+        "validate":"kp_edtec.kp_edtec.doctype.program.validate",
+        "on_trash":"kp_edtec.kp_edtec.doctype.program.on_trash"
     },
     "Programs":{
-        "validate":"kp_edtec.ed_tec.validations.programs.validate"
+        "validate":"kp_edtec.kp_edtec.validations.programs.validate"
     },
     "Program Enrollment":{
-        "on_submit":["kp_edtec.ed_tec.doctype.program_enrollment.on_submit"],
-        "on_cancel":["kp_edtec.ed_tec.doctype.program_enrollment.on_cancel"],
-        "on_change":"kp_edtec.ed_tec.doctype.program_enrollment.on_change",
-        "validate":["kp_edtec.ed_tec.validations.program_enrollment.validate",
-                    "kp_edtec.ed_tec.doctype.program_enrollment.validate"]
+        "on_submit":["kp_edtec.kp_edtec.doctype.program_enrollment.on_submit"],
+        "on_cancel":["kp_edtec.kp_edtec.doctype.program_enrollment.on_cancel"],
+        "on_change":"kp_edtec.kp_edtec.doctype.program_enrollment.on_change",
+        "validate":["kp_edtec.kp_edtec.validations.program_enrollment.validate",
+                    "kp_edtec.kp_edtec.doctype.program_enrollment.validate"]
     },
    
     "Reevaluation Application":{
-        "validate":"kp_edtec.ed_tec.validations.reevalution_application.validate"
+        "validate":"kp_edtec.kp_edtec.validations.reevalution_application.validate"
     },
     "Student":{
-        "after_insert":"kp_edtec.ed_tec.doctype.student.after_insert",
-        "on_trash":"kp_edtec.ed_tec.doctype.student.on_trash",
-        "on_change":"kp_edtec.ed_tec.doctype.student.on_update",
-        "validate":"kp_edtec.ed_tec.doctype.student.validate"
+        "after_insert":"kp_edtec.kp_edtec.doctype.student.after_insert",
+        "on_trash":"kp_edtec.kp_edtec.doctype.student.on_trash",
+        "on_change":"kp_edtec.kp_edtec.doctype.student.on_update",
+        "validate":"kp_edtec.kp_edtec.doctype.student.validate"
     },
     "Student Admit Card":{
-        "validate":"kp_edtec.ed_tec.validations.student_admit_card.validate"
+        "validate":"kp_edtec.kp_edtec.validations.student_admit_card.validate"
     },
     "Student Group":{
-        "validate":["kp_edtec.ed_tec.validations.student_group.validate","kp_edtec.ed_tec.doctype.student_group.validate"],
-        "after_insert":"kp_edtec.ed_tec.doctype.student_group.after_insert",
-        "on_trash":"kp_edtec.ed_tec.doctype.student_group.on_trash"
+        "validate":["kp_edtec.kp_edtec.validations.student_group.validate","kp_edtec.kp_edtec.doctype.student_group.validate"],
+        "after_insert":"kp_edtec.kp_edtec.doctype.student_group.after_insert",
+        "on_trash":"kp_edtec.kp_edtec.doctype.student_group.on_trash"
     },
     "Student Log":{
-        "validate":"kp_edtec.ed_tec.validations.student_log.validate"
+        "validate":"kp_edtec.kp_edtec.validations.student_log.validate"
     },
     "Student Exchange Applicant":{
-        "validate":"kp_edtec.ed_tec.validations.student_exchange_applicant.validate"
+        "validate":"kp_edtec.kp_edtec.validations.student_exchange_applicant.validate"
     },
     "Student Exam Block List":{
-        "validate":"kp_edtec.ed_tec.validations.student_exam_block_list.validate"
+        "validate":"kp_edtec.kp_edtec.validations.student_exam_block_list.validate"
     },
     "Student Leave Application":{
-        "validate":"kp_edtec.ed_tec.validations.student_leave_application.validate"
+        "validate":"kp_edtec.kp_edtec.validations.student_leave_application.validate"
     },
     "Student Applicant":{
-        "validate":["kp_edtec.ed_tec.doctype.student_applicant.validate",
-                    "kp_edtec.ed_tec.validations.student_applicant.validate"],
-        "on_change":"kp_edtec.ed_tec.doctype.student_applicant.on_update",
-        "on_submit":"kp_edtec.ed_tec.validations.student_applicant.on_submit"
+        "validate":["kp_edtec.kp_edtec.doctype.student_applicant.validate",
+                    "kp_edtec.kp_edtec.validations.student_applicant.validate"],
+        "on_change":"kp_edtec.kp_edtec.doctype.student_applicant.on_update",
+        "on_submit":"kp_edtec.kp_edtec.validations.student_applicant.on_submit"
     },
     "Student Admission":{
-        "validate":["kp_edtec.ed_tec.doctype.student_admission.validate",
-        "kp_edtec.ed_tec.validations.student_admission.validate"]
+        "validate":["kp_edtec.kp_edtec.doctype.student_admission.validate",
+        "kp_edtec.kp_edtec.validations.student_admission.validate"]
     },
     "Student Attendance":{
-        "validate":["kp_edtec.ed_tec.doctype.student_attendance.validate"]
+        "validate":["kp_edtec.kp_edtec.doctype.student_attendance.validate"]
     },
     ("Student Admit Card"):{
-        "after_insert":"kp_edtec.ed_tec.doctype.user_permission.after_insert",
-        "on_trash":"kp_edtec.ed_tec.doctype.user_permission.on_trash"
+        "after_insert":"kp_edtec.kp_edtec.doctype.user_permission.after_insert",
+        "on_trash":"kp_edtec.kp_edtec.doctype.user_permission.on_trash"
     },
     "Payment Entry": {
-		"validate": "kp_edtec.ed_tec.validations.payment_entry.validate",
+		"validate": "kp_edtec.kp_edtec.validations.payment_entry.validate",
 	},
 }
 
@@ -302,8 +302,8 @@ doc_events = {
 
 scheduler_events = {
     "daily": [
-		"kp_edtec.ed_tec.doctype.student_blocklist_check.student_blocklist_check",
-        "kp_edtec.ed_tec.doctype.exam_assessment_plan.exam_assessment_plan.make_exam_paper_setting_by_paper_setting_date"
+		"kp_edtec.kp_edtec.doctype.student_blocklist_check.student_blocklist_check",
+        "kp_edtec.kp_edtec.doctype.exam_assessment_plan.exam_assessment_plan.make_exam_paper_setting_by_paper_setting_date"
 	]
 
 }
@@ -317,32 +317,32 @@ scheduler_events = {
 # ------------------------------
 #
 override_whitelisted_methods = {
-	"erpnext.education.api.get_course_schedule_events": "kp_edtec.ed_tec.doctype.course_schedule.get_course_schedule_events",
-    "erpnext.education.api.mark_attendance": "kp_edtec.ed_tec.doctype.student_attendance.mark_attendance"
+	"erpnext.education.api.get_course_schedule_events": "kp_edtec.kp_edtec.doctype.course_schedule.get_course_schedule_events",
+    "erpnext.education.api.mark_attendance": "kp_edtec.kp_edtec.doctype.student_attendance.mark_attendance"
 }
 override_doctype_class = {
-	"Course Scheduling Tool": "kp_edtec.ed_tec.doctype.course_scheduling_tool.CourseSchedulingTool",
-    "Student Attendance": "kp_edtec.ed_tec.doctype.student_attendance.StudentAttendance",
-    "Employee":"kp_edtec.ed_tec.doctype.employee.Employee",
-    "Course Schedule": "kp_edtec.ed_tec.doctype.course_schedule.CourseSchedule",
+	"Course Scheduling Tool": "kp_edtec.kp_edtec.doctype.course_scheduling_tool.CourseSchedulingTool",
+    "Student Attendance": "kp_edtec.kp_edtec.doctype.student_attendance.StudentAttendance",
+    "Employee":"kp_edtec.kp_edtec.doctype.employee.Employee",
+    "Course Schedule": "kp_edtec.kp_edtec.doctype.course_schedule.CourseSchedule",
 }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 override_doctype_dashboards = {
-    "Academic Year": "kp_edtec.ed_tec.dashboard.academic_year_dashboard.get_data",
-    "Academic Term": "kp_edtec.ed_tec.dashboard.academic_term_dashboard.get_data",
-    "Assessment Group":"kp_edtec.ed_tec.dashboard.assessment_group_dashboard.get_data",
-    "Course": "kp_edtec.ed_tec.dashboard.course_dashboard.get_data",
-    "Grading Scale": "kp_edtec.ed_tec.dashboard.grading_scale_dashboard.get_data",
-    "Hostel Admission": "kp_edtec.ed_tec.dashboard.hostel_admission_dashboard.get_data",
-    "Instructor": "kp_edtec.ed_tec.dashboard.instructor_dashboard.get_data",
-    "Program": "kp_edtec.ed_tec.dashboard.program_dashboard.get_data",
-    "Room": "kp_edtec.ed_tec.dashboard.room_dashboard.get_data",
-    "Student": "kp_edtec.ed_tec.dashboard.student_dashboard.get_data",
-    "Student Group": "kp_edtec.ed_tec.dashboard.student_group_dashboard.get_data",
-	"User": "kp_edtec.ed_tec.dashboard.user_dashbaord.get_data",
+    "Academic Year": "kp_edtec.kp_edtec.dashboard.academic_year_dashboard.get_data",
+    "Academic Term": "kp_edtec.kp_edtec.dashboard.academic_term_dashboard.get_data",
+    "Assessment Group":"kp_edtec.kp_edtec.dashboard.assessment_group_dashboard.get_data",
+    "Course": "kp_edtec.kp_edtec.dashboard.course_dashboard.get_data",
+    "Grading Scale": "kp_edtec.kp_edtec.dashboard.grading_scale_dashboard.get_data",
+    "Hostel Admission": "kp_edtec.kp_edtec.dashboard.hostel_admission_dashboard.get_data",
+    "Instructor": "kp_edtec.kp_edtec.dashboard.instructor_dashboard.get_data",
+    "Program": "kp_edtec.kp_edtec.dashboard.program_dashboard.get_data",
+    "Room": "kp_edtec.kp_edtec.dashboard.room_dashboard.get_data",
+    "Student": "kp_edtec.kp_edtec.dashboard.student_dashboard.get_data",
+    "Student Group": "kp_edtec.kp_edtec.dashboard.student_group_dashboard.get_data",
+	"User": "kp_edtec.kp_edtec.dashboard.user_dashbaord.get_data",
 }
 
 # exempt linked doctypes from being automatically cancelled

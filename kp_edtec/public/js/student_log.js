@@ -9,7 +9,7 @@ frappe.ui.form.on('Student Log',{
         });
         frm.set_query("program", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.student.get_sem',
+                query: 'kp_edtec.kp_edtec.doctype.student.get_sem',
                 filters: {
                     "student":frm.doc.student
                 }
@@ -17,7 +17,7 @@ frappe.ui.form.on('Student Log',{
         });
         frm.set_query("student_batch", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.student.get_batch',
+                query: 'kp_edtec.kp_edtec.doctype.student.get_batch',
                 filters: {
                     "student":frm.doc.student
                 }

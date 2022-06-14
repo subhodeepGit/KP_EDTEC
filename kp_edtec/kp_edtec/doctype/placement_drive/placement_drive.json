@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2021-11-15 01:49:54.456257",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "posting_date",
+  "placement_company",
+  "academic_year",
+  "academic_term",
+  "column_break_3",
+  "type_of_drive",
+  "location_of_drive",
+  "for_department",
+  "drive_details_section",
+  "application_start_date",
+  "application_end_date",
+  "designations_position",
+  "for_programs",
+  "eligibility_criteria",
+  "process_of_placement",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "placement_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Placement Company",
+   "options": "Placement Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_drive",
+   "fieldtype": "Select",
+   "label": "Type of Drive",
+   "options": "\nIN Campus\nOFF Campus",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_of_drive",
+   "fieldtype": "Link",
+   "label": "Location of Drive",
+   "options": "Location"
+  },
+  {
+   "fieldname": "drive_details_section",
+   "fieldtype": "Section Break",
+   "label": "Drive Details"
+  },
+  {
+   "fieldname": "application_start_date",
+   "fieldtype": "Date",
+   "label": "Application start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_end_date",
+   "fieldtype": "Date",
+   "label": "Application End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designations_position",
+   "fieldtype": "Table",
+   "label": "Designations Position",
+   "options": "Placement Designations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Placement Drive",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "eligibility_criteria",
+   "fieldtype": "Small Text",
+   "label": "Eligibility Criteria",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_of_placement",
+   "fieldtype": "Small Text",
+   "label": "Process of Placement",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "for_programs",
+   "fieldtype": "Table",
+   "label": "For Programs",
+   "options": "Place Eligible Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "for_department",
+   "fieldtype": "Table",
+   "label": "For Department",
+   "options": "Placement Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-03 12:24:50.856194",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Placement Drive",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

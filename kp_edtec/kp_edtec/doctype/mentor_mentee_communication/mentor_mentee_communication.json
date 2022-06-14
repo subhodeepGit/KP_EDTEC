@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "autoname": "MNT-COMN.-.####",
+ "creation": "2021-10-04 02:13:03.265613",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "student",
+  "student_name",
+  "programs",
+  "column_break_5",
+  "mentor",
+  "mentor_name",
+  "section_break_7",
+  "description",
+  "references_section",
+  "student_disciplinary_complain"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mentor",
+   "fieldtype": "Link",
+   "label": "Mentor Allocation",
+   "options": "Mentor Allocation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "student_disciplinary_complain",
+   "fieldtype": "Link",
+   "label": "Student Disciplinary Complain",
+   "options": "Student Disciplinary Complain",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mentor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mentor Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-25 21:49:14.437073",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Mentor Mentee Communication",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

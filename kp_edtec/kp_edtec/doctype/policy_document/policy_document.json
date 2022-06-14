@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "creation": "2021-10-11 15:58:14.651210",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "document_submitted_to",
+  "date_of_submission",
+  "level",
+  "research_score_claimed",
+  "score",
+  "column_break_7",
+  "score_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Title "
+  },
+  {
+   "fieldname": "document_submitted_to",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Document Submitted To"
+  },
+  {
+   "fieldname": "date_of_submission",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Submission"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "\nInternational\nNational\nState"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u25cf For Policy document submission - International: 10, National: 07, State: 04",
+   "fieldname": "score_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Score Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "migration_hash": "3b6454677dbbe19baabcd042740f6038",
+ "modified": "2022-02-15 00:04:35.949456",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Policy Document",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

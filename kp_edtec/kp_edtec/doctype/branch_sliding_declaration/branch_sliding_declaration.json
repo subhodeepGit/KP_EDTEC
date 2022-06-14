@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BRN-SLD.-.#####",
+ "creation": "2021-05-16 19:10:47.742476",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "academic_year",
+  "for_program",
+  "column_break_5",
+  "application_start_date",
+  "application_end_date",
+  "sliding_details_section",
+  "branch_sliding__criteria",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "application_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Application Start Date",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "application_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Application End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sliding_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sliding Details"
+  },
+  {
+   "fieldname": "branch_sliding__criteria",
+   "fieldtype": "Table",
+   "label": "Branch Sliding  Criteria",
+   "options": "Branch Sliding Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Branch sliding Declaration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "for_program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "For Program",
+   "options": "Programs",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-12-07 15:27:32.341981",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Branch sliding Declaration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,7 +1,7 @@
 import frappe
-from kp_edtec.ed_tec.doctype.user_permission import add_user_permission
+from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission
 
-# bench execute ed_tec.patches.course_patch.add_user_permission_to_course
+# bench execute kp_edtec.patches.course_patch.add_user_permission_to_course
 def add_user_permission_to_course():
     for cr_enroll in frappe.get_all("Course Enrollment",["program_enrollment","student","course","name"]):
         print(cr_enroll.name)

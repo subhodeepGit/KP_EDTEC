@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "FNRS.-.#####",
+ "creation": "2022-01-05 15:53:10.245387",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "programs",
+  "program",
+  "course",
+  "academic_year",
+  "academic_term",
+  "column_break_3",
+  "student",
+  "student_name",
+  "roll_no",
+  "registration_number",
+  "student_group",
+  "assessment_group",
+  "grading_scale",
+  "assessment_status",
+  "section_break_5",
+  "get_result",
+  "assessment_result_item",
+  "evaluation_result_item",
+  "section_break_8",
+  "sgpa",
+  "column_break_17",
+  "result",
+  "column_break_11",
+  "grade",
+  "section_break_13",
+  "comment",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "label": "Programs",
+   "options": "Programs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Program",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Course",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "student_group",
+   "fieldtype": "Link",
+   "label": "Student Group",
+   "options": "Student Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assessment_group",
+   "fieldtype": "Link",
+   "label": "Assessment Group",
+   "options": "Assessment Group",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "course_assessment_plan.grading_scale",
+   "fieldname": "grading_scale",
+   "fieldtype": "Link",
+   "label": "Grading Scale",
+   "options": "Grading Scale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Result"
+  },
+  {
+   "fieldname": "assessment_result_item",
+   "fieldtype": "Table",
+   "label": "Assessment Result Item",
+   "options": "Assessment Result Item"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sgpa",
+   "fieldtype": "Float",
+   "label": "SGPA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "label": "Result",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assessment_plan.maximum_assessment_score",
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exam Assessment Result",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "evaluation_result_item",
+   "fieldtype": "Table",
+   "label": "Evaluation Result Item",
+   "options": "Evaluation Result Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assessment_status",
+   "fieldtype": "Data",
+   "label": "Assessment Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "get_result",
+   "fieldtype": "Button",
+   "label": "Get Result"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "student.roll_no",
+   "fieldname": "roll_no",
+   "fieldtype": "Data",
+   "label": "Roll No",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "student.permanant_registration_number",
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-04-27 16:50:53.436899",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Exam Assessment Result",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academics User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Education",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "student_name"
+}

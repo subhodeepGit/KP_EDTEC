@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "autoname": "format:result of- {programs}-for {academic_term}",
+ "creation": "2021-10-20 18:27:36.455883",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "programs",
+  "semester",
+  "grading_scale",
+  "column_break_3",
+  "academic_year",
+  "academic_term",
+  "section_break_6",
+  "result_creation_status",
+  "get_students",
+  "total_enrolled_student",
+  "total_students_for_result",
+  "result_declaration_student"
+ ],
+ "fields": [
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Semester",
+   "options": "Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "result_declaration_student",
+   "fieldtype": "Table",
+   "label": "Result Declaration Student",
+   "options": "Result Declaration Student",
+   "read_only": 1
+  },
+  {
+   "fieldname": "get_students",
+   "fieldtype": "Button",
+   "label": "Get Students"
+  },
+  {
+   "fieldname": "total_enrolled_student",
+   "fieldtype": "Int",
+   "label": "Total Enrolled Student",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_students_for_result",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total Students for Result"
+  },
+  {
+   "fieldname": "result_creation_status",
+   "fieldtype": "Select",
+   "label": "Result Creation Status",
+   "options": "\nIn Process\nFailed\nSuccessful",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grading_scale",
+   "fieldtype": "Link",
+   "label": "Grading scale",
+   "options": "Grading Scale",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-03 20:09:30.907467",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Final Result Declaration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

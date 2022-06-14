@@ -1,7 +1,7 @@
 import frappe
-from kp_edtec.ed_tec.doctype.user_permission import add_user_permission
+from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission
 
-# ed_tec.patches.exam_paper_setting_patch.update_exam_paper_setting_permission
+# kp_edtec.patches.exam_paper_setting_patch.update_exam_paper_setting_permission
 def execute():
     delete_permission()
     update_exam_paper_setting_permission()

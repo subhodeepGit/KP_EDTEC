@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "creation": "2021-05-23 12:17:33.994874",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student_category",
+  "fee_structure",
+  "amount",
+  "due_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fee Structure",
+   "options": "Fee Structure",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "fee_structure.total_amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "student_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student Category",
+   "options": "Student Category"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-05 13:57:37.154160",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Fee Structure Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

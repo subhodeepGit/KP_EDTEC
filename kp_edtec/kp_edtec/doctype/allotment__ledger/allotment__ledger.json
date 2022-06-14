@@ -1,0 +1,100 @@
+{
+    "actions": [],
+    "creation": "2021-10-03 20:37:14.576107",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "student",
+     "hostel_room",
+     "no_of_beds",
+     "column_break_5",
+     "allotment_type",
+     "allotment_date",
+     "section_break_7",
+     "reference_doctype",
+     "column_break_9",
+     "reference_name"
+    ],
+    "fields": [
+     {
+      "fieldname": "student",
+      "fieldtype": "Link",
+      "hidden": 1,
+      "label": "Student",
+      "options": "Student"
+     },
+     {
+      "fieldname": "hostel_room",
+      "fieldtype": "Link",
+      "label": "Hostel room",
+      "options": "Hostel Room"
+     },
+     {
+      "fieldname": "allotment_date",
+      "fieldtype": "Date",
+      "label": "Allotment Date"
+     },
+     {
+      "fieldname": "no_of_beds",
+      "fieldtype": "Int",
+      "label": "no of Beds"
+     },
+     {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+     },
+     {
+      "fieldname": "allotment_type",
+      "fieldtype": "Select",
+      "label": "Allotment Type",
+      "options": "\nAdd Balance\nDeduct Balance"
+     },
+     {
+      "fieldname": "section_break_7",
+      "fieldtype": "Section Break"
+     },
+     {
+      "fieldname": "reference_doctype",
+      "fieldtype": "Select",
+      "label": "Reference Doctype",
+      "options": "\nHostel Allotment\nHostel Deallotment\nHostel Room"
+     },
+     {
+      "fieldname": "reference_name",
+      "fieldtype": "Dynamic Link",
+      "label": "Reference Name",
+      "options": "reference_doctype"
+     },
+     {
+      "fieldname": "column_break_9",
+      "fieldtype": "Column Break"
+     }
+    ],
+    "in_create": 1,
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2022-02-08 11:01:29.418487",
+    "modified_by": "Administrator",
+    "module": "Kp Edtec",
+    "name": "Allotment  Ledger",
+    "owner": "Administrator",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+     }
+    ],
+    "read_only": 1,
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+   }

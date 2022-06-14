@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "autoname": "EXC-DEC-.####",
+ "creation": "2021-05-19 20:05:24.635984",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "application_start",
+  "application_end",
+  "is_active",
+  "column_break_4",
+  "academic_year",
+  "academic_term",
+  "student_category",
+  "program__to_exchange",
+  "semester",
+  "academic_calendar_template",
+  "student_exchange_program_criteria_section",
+  "criteria",
+  "criteria_details",
+  "documents_template",
+  "required_documents",
+  "fees_details_section",
+  "fees_applicable",
+  "fee_structure"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "application_start",
+   "fieldtype": "Date",
+   "label": "Application Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_end",
+   "fieldtype": "Date",
+   "label": "Application End",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "program__to_exchange",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Program  To Exchange",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_exchange_program_criteria_section",
+   "fieldtype": "Section Break",
+   "label": "Student Exchange Program Criteria"
+  },
+  {
+   "fieldname": "criteria",
+   "fieldtype": "Link",
+   "label": "Criteria",
+   "options": "Student Exchange Program Criteria"
+  },
+  {
+   "fetch_from": "criteria.description",
+   "fieldname": "criteria_details",
+   "fieldtype": "Text Editor",
+   "label": "Criteria Details"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_category",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Student Category",
+   "options": "Student Category"
+  },
+  {
+   "fieldname": "fees_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fees Details"
+  },
+  {
+   "depends_on": "eval:doc.fees_applicable=='YES'",
+   "fieldname": "fee_structure",
+   "fieldtype": "Table",
+   "label": "Fee Structure",
+   "options": "Fee Structure Item"
+  },
+  {
+   "fieldname": "fees_applicable",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fees Applicable",
+   "options": "\nYES\nNO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "is active"
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "documents_template",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Documents Template",
+   "options": "Documents Template"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Table",
+   "label": "Required Documents",
+   "options": "Required Documents"
+  },
+  {
+   "fieldname": "academic_calendar_template",
+   "fieldtype": "Link",
+   "label": "Academic Calendar Template",
+   "options": "Academic Calendar Template"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-22 17:41:30.517562",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Exchange Program Declaration",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "program__to_exchange",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

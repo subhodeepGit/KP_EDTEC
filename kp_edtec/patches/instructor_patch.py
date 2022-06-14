@@ -1,6 +1,6 @@
 import frappe
 
-# ed_tec.patches.instructor_patch.update_instructor_permissions
+# kp_edtec.patches.instructor_patch.update_instructor_permissions
 def execute():
     delete_user_permission()
     update_instructor_log()

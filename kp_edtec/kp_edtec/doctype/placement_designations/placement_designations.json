@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-11-15 01:49:32.358704",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "designation",
+  "no_of_position"
+ ],
+ "fields": [
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "no_of_position",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Position"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-15 01:49:32.358704",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Placement Designations",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,7 +1,7 @@
 import frappe
-from kp_edtec.ed_tec.doctype.user_permission import add_user_permission,delete_ref_doctype_permissions
+from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission,delete_ref_doctype_permissions
 
-# bench execute ed_tec.patches.student_patch.execute
+# bench execute kp_edtec.patches.student_patch.execute
 def execute():
     set_user_permission()
 

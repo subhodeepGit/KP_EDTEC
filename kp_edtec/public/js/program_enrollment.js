@@ -2,7 +2,7 @@ frappe.ui.form.on('Program Enrollment', {
 	seat_reservation_type:function(frm){
         if(frm.doc.seat_reservation_type){
             frappe.call({
-                method: "kp_edtec.ed_tec.doctype.program_enrollment.get_available_seats",
+                method: "kp_edtec.kp_edtec.doctype.program_enrollment.get_available_seats",
                 args:{
                     "student_applicant":frm.doc.reference_name,
                     "seat_reservation_type":frm.doc.seat_reservation_type,
@@ -26,7 +26,7 @@ frappe.ui.form.on('Program Enrollment', {
             }
             frm.set_query('programs', function() {
                 return{
-                    query: 'kp_edtec.ed_tec.doctype.program_enrollment.get_programs_stud_app',
+                    query: 'kp_edtec.kp_edtec.doctype.program_enrollment.get_programs_stud_app',
                     filters: {
                         "student_applicant":frm.doc.reference_name
                     }
@@ -34,7 +34,7 @@ frappe.ui.form.on('Program Enrollment', {
             });
             frm.set_query('program', function() {
                 return{
-                    query: 'kp_edtec.ed_tec.doctype.program_enrollment.get_program_stud_app',
+                    query: 'kp_edtec.kp_edtec.doctype.program_enrollment.get_program_stud_app',
                     filters: {
                         "student_applicant":frm.doc.reference_name,
                         "programs":frm.doc.programs
@@ -43,7 +43,7 @@ frappe.ui.form.on('Program Enrollment', {
             });
             frm.set_query("seat_reservation_type", function() {
                 return {
-                    query: 'kp_edtec.ed_tec.doctype.program_enrollment.get_seat_reservation_type',
+                    query: 'kp_edtec.kp_edtec.doctype.program_enrollment.get_seat_reservation_type',
                     filters: {
                         "student_applicant": frm.doc.reference_name,
                     }
@@ -79,7 +79,7 @@ frappe.ui.form.on('Program Enrollment', {
         // }
         frm.set_query('student', function() {
 			return{
-				query: 'kp_edtec.ed_tec.doctype.program_enrollment.get_students',
+				query: 'kp_edtec.kp_edtec.doctype.program_enrollment.get_students',
 				filters: {
 					"programs":frm.doc.programs
 				}
@@ -93,7 +93,7 @@ frappe.ui.form.on('Program Enrollment', {
 
         frm.set_query("course","courses", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.program_enrollment.get_courses',
+                query: 'kp_edtec.kp_edtec.doctype.program_enrollment.get_courses',
                 filters: {
                     "semester":frm.doc.program
                 }
@@ -117,7 +117,7 @@ frappe.ui.form.on('Program Enrollment', {
             });
             frm.set_query("student_category", function() {
                 return {
-                    query: 'kp_edtec.ed_tec.doctype.program_enrollment.get_cat',
+                    query: 'kp_edtec.kp_edtec.doctype.program_enrollment.get_cat',
                     filters: {
                         "student":frm.doc.student
                     }
@@ -136,7 +136,7 @@ frappe.ui.form.on('Program Enrollment', {
     program(frm){
         if (frm.doc.program){
             frappe.call({
-                method: "kp_edtec.ed_tec.doctype.semesters.semesters.get_courses",
+                method: "kp_edtec.kp_edtec.doctype.semesters.semesters.get_courses",
                 args: {
                     semester: frm.doc.program,
                 },
@@ -155,7 +155,7 @@ frappe.ui.form.on('Program Enrollment', {
                 
             }); 
             frappe.call({
-                method: "kp_edtec.ed_tec.doctype.program_enrollment.get_academic_calender_table",
+                method: "kp_edtec.kp_edtec.doctype.program_enrollment.get_academic_calender_table",
                 args: {
                     programs:frm.doc.programs,
                     semester: frm.doc.program,
@@ -191,7 +191,7 @@ frappe.ui.form.on('Program Enrollment Course', {
 	courses_add: function(frm){
 		frm.fields_dict['courses'].grid.get_field('course').get_query = function(doc) {
 			return {
-                query: 'kp_edtec.ed_tec.doctype.program_enrollment.get_courses',
+                query: 'kp_edtec.kp_edtec.doctype.program_enrollment.get_courses',
                 filters: {
                     "semester":frm.doc.program
                 }
@@ -204,7 +204,7 @@ frappe.ui.form.on('Program Enrollment', {
 	student: function(frm) {
 		if (frm.doc.student) {
 			frappe.call({
-				method:"kp_edtec.ed_tec.doctype.program_enrollment.get_roll",
+				method:"kp_edtec.kp_edtec.doctype.program_enrollment.get_roll",
 				args: {
 					"student": frm.doc.student,
 				},

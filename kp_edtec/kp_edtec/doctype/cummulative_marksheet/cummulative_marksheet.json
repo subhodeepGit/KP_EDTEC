@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CMAR.-.######",
+ "creation": "2022-01-24 23:53:09.470771",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "roll_no",
+  "registration_number",
+  "completed_on",
+  "column_break_5",
+  "year_of_admission",
+  "year_of_completion",
+  "programs",
+  "department",
+  "section_break_9",
+  "cummulative_courses_item",
+  "section_break_11",
+  "cumulatice_grades_item",
+  "cgpa"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "year_of_admission",
+   "fieldtype": "Link",
+   "label": "Year of Admission",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "year_of_completion",
+   "fieldtype": "Link",
+   "label": "Year of Completion",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cumulatice_grades_item",
+   "fieldtype": "Table",
+   "label": "Cumulatice Grades Item",
+   "options": "Cumulatice Grades Item"
+  },
+  {
+   "fieldname": "cgpa",
+   "fieldtype": "Float",
+   "label": "CGPA"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cummulative_courses_item",
+   "fieldtype": "Table",
+   "label": "Cummulative Courses Item",
+   "options": "Cummulative Courses Item"
+  },
+  {
+   "fetch_from": "student.permanant_registration_number",
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number"
+  },
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "label": "PROGRAMME",
+   "options": "Programs"
+  },
+  {
+   "default": "Today",
+   "fieldname": "completed_on",
+   "fieldtype": "Date",
+   "label": "COMPLETED ON"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "School of",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "student.roll_no",
+   "fieldname": "roll_no",
+   "fieldtype": "Data",
+   "label": "Roll No",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-18 17:12:57.658652",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Cummulative Marksheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

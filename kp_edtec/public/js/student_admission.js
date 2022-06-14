@@ -23,7 +23,7 @@ frappe.ui.form.on('Student Admission', {
         });
         frm.set_query("counselling_structure", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.student_admission.get_counselling_structure',
+                query: 'kp_edtec.kp_edtec.doctype.student_admission.get_counselling_structure',
                 filters: {
                     "program_grade":frm.doc.program_grade,
                     "programs":frm.doc.admission_program,
@@ -66,7 +66,7 @@ frappe.ui.form.on('Student Admission', {
         })
 		frm.set_query("semester", function() {
 			return {
-				query: 'kp_edtec.ed_tec.doctype.student_admission.get_sem',
+				query: 'kp_edtec.kp_edtec.doctype.student_admission.get_sem',
 				filters: {
 					"program":frm.doc.admission_program
 				}
@@ -81,7 +81,7 @@ frappe.ui.form.on('Student Admission', {
         });
         frm.set_query("document_type","reservations_distribution", function(){
             return{
-                query: 'kp_edtec.ed_tec.doctype.student_admission.get_doc'
+                query: 'kp_edtec.kp_edtec.doctype.student_admission.get_doc'
             }
         })
         frm.fields_dict['reservations_distribution'].grid.get_field('seat_reservation_type').get_query = function(doc){

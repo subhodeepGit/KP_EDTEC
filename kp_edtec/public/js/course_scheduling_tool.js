@@ -3,7 +3,7 @@ frappe.ui.form.on('Course Scheduling Tool', {
 	setup: function(frm) {
         frm.set_query("instructor", function() {
 			return {
-				query: 'kp_edtec.ed_tec.doctype.course_scheduling_tool.get_instructor',
+				query: 'kp_edtec.kp_edtec.doctype.course_scheduling_tool.get_instructor',
 				filters: {
 					"course":frm.doc.course
 				}
@@ -11,7 +11,7 @@ frappe.ui.form.on('Course Scheduling Tool', {
 		});
 		frm.set_query("course", function() {
 			return {
-				query: 'kp_edtec.ed_tec.doctype.course_scheduling_tool.get_course',
+				query: 'kp_edtec.kp_edtec.doctype.course_scheduling_tool.get_course',
 				filters: {
 					"program":frm.doc.program
 				}
@@ -42,7 +42,7 @@ frappe.ui.form.on('Course Scheduling Tool', {
 					"in_list_view":1,
 					get_query: function () {
 						return {
-							query: 'kp_edtec.ed_tec.doctype.course_schedule.get_instructor',
+							query: 'kp_edtec.kp_edtec.doctype.course_schedule.get_instructor',
                 			filters:{"course":frm.doc.course}
 						}
 					},

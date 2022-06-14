@@ -1,0 +1,29 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2021-10-28 12:20:37.194783",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-10-28 12:20:37.194783",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Fees Receivable",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Fees",
+ "report_name": "Fees Receivable",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2021-05-16 19:09:56.197442",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "program",
+  "semester",
+  "student_category",
+  "eligibility_score",
+  "total_seats",
+  "available_seats",
+  "update_seats"
+ ],
+ "fields": [
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_category",
+   "fieldtype": "Link",
+   "label": "Student Category",
+   "options": "Student Category"
+  },
+  {
+   "fieldname": "eligibility_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Eligibility score",
+   "reqd": 1,
+   "width": "10px"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "available_seats",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Available Seats",
+   "read_only": 1,
+   "width": "10px"
+  },
+  {
+   "fieldname": "update_seats",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Update Seats",
+   "width": "10px"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "total_seats",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Seats",
+   "read_only": 1,
+   "reqd": 1,
+   "width": "10px"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Semester",
+   "options": "Program",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-10 18:46:58.038516",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Branch Sliding Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

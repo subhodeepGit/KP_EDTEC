@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "creation": "2021-08-17 22:34:07.940132",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course",
+  "credit",
+  "theory",
+  "practical",
+  "maximum_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course",
+   "options": "Course",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Credit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "theory",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Theory"
+  },
+  {
+   "fieldname": "practical",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Practical"
+  },
+  {
+   "fieldname": "maximum_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Maximum Score",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-08-18 16:19:42.497801",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Course Assessment Credit",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

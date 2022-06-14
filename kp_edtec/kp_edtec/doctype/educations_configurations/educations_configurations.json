@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2021-04-13 15:33:25.049283",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "admission_configurations_section",
+  "student_registration_naming",
+  "seat_reservation_based_on",
+  "exam_section",
+  "exam_fee_applicable"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "exam_fee_applicable",
+   "fieldtype": "Check",
+   "label": "Exam Fee Applicable"
+  },
+  {
+   "description": "Naming Options:\n<ol><li><b>field:[fieldname]</b> - By Field</li><li><b>naming_series:</b> - By Naming Series (field called naming_series must be present</li><li><b>Prompt</b> - Prompt user for a name</li><li><b>[series]</b> - Series by prefix (separated by a dot); for example PRE.#####</li>\n<li><b>format:MM.-.fieldname1.-.{#####}</b> - Replace all braced words (fieldnames, date words (DD, MM, YY), series) with their value.</li></ol>",
+   "fieldname": "student_registration_naming",
+   "fieldtype": "Data",
+   "label": "Student Registration Naming"
+  },
+  {
+   "fieldname": "admission_configurations_section",
+   "fieldtype": "Section Break",
+   "label": "Admission"
+  },
+  {
+   "fieldname": "seat_reservation_based_on",
+   "fieldtype": "Table",
+   "label": "Seat Reservation based on",
+   "options": "Seat Reservation based on"
+  },
+  {
+   "fieldname": "exam_section",
+   "fieldtype": "Section Break",
+   "label": "Exam"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-12-16 15:23:55.684477",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Educations Configurations",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

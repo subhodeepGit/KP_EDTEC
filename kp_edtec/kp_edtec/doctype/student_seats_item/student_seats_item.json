@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "creation": "2021-05-23 08:48:25.626772",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student_category",
+  "seats"
+ ],
+ "fields": [
+  {
+   "fieldname": "student_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student Category",
+   "options": "Student Category"
+  },
+  {
+   "fieldname": "seats",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Seats"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-05-23 10:09:51.994727",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Student Seats Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

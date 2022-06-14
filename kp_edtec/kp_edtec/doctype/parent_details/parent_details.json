@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "creation": "2021-04-14 22:47:49.281418",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parent_name",
+  "occupation",
+  "qualification",
+  "annual_income",
+  "relation"
+ ],
+ "fields": [
+  {
+   "fieldname": "parent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parent Name"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Qualification"
+  },
+  {
+   "fieldname": "annual_income",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Annual Income"
+  },
+  {
+   "fieldname": "relation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relation",
+   "options": "\nFather\nMother\nOther"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-04-14 22:47:49.281418",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Parent Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

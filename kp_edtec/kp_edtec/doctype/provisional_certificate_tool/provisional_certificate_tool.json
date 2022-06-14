@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "format:Certificate For {programs} Of {year_of_admission}-and {year_of_completion}",
+ "creation": "2022-05-19 10:45:15.558557",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "programs",
+  "academic_term",
+  "place",
+  "name_of_degree",
+  "certificate_creation_status",
+  "get_students",
+  "total_enrolled_student",
+  "provisional_certificate_student"
+ ],
+ "fields": [
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Current Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "certificate_creation_status",
+   "fieldtype": "Select",
+   "label": "Certificate Creation Status",
+   "options": "\nIn Process\nFailed\nSuccessful",
+   "read_only": 1
+  },
+  {
+   "fieldname": "get_students",
+   "fieldtype": "Button",
+   "label": "Get Students"
+  },
+  {
+   "fieldname": "total_enrolled_student",
+   "fieldtype": "Int",
+   "label": "Total Students for Certificate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "provisional_certificate_student",
+   "fieldtype": "Table",
+   "label": "Provisional Certificate Student",
+   "options": "Marksheet"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "name_of_degree",
+   "fieldtype": "Data",
+   "label": "Name of Degree"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-03 15:15:41.775456",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Provisional Certificate Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -14,7 +14,7 @@ frappe.ui.form.on('Course Enrollment', {
 	// setup(frm) {
     //     frm.set_query("course", function() {
     //         return {
-    //             query: 'ed_tec.ed_tec.doctype.course_enrollment.get_course',
+    //             query: 'kp_edtec.kp_edtec.doctype.course_enrollment.get_course',
     //             filters: {
     //                 "program_enrollment":frm.doc.program_enrollment
     //             }

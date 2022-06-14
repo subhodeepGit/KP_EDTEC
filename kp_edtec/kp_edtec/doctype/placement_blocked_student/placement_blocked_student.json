@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PLBK.-.####",
+ "creation": "2022-02-03 00:11:12.623735",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "academic_year",
+  "column_break_3",
+  "programs",
+  "semester",
+  "section_break_5",
+  "block_drive_list",
+  "section_break_7",
+  "blocked_student"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "programs",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Programs",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "semester",
+   "options": "Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "block_drive_list",
+   "fieldtype": "Table",
+   "label": "Block Drive List",
+   "options": "Block Drive List"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blocked_student",
+   "fieldtype": "Table",
+   "label": "Blocked Student",
+   "options": "Placement Blocked Student List"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-03 00:12:03.397743",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Placement Blocked Student",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

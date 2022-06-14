@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "creation": "2021-05-13 17:05:33.976430",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_name",
+  "document_name_",
+  "mandatory",
+  "attach",
+  "is_available",
+  "attached"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "document_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Name",
+   "options": "Documents",
+   "width": "10px"
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Mandatory",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "description": "Click on the top right arrow (v) button or outside of the table to go back...",
+   "fieldname": "attach",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attach"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "description": "Click on the top right arrow (v) button or outside of the table to go back...",
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Available ?",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_name_",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Document Name"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.attach!=null",
+   "fieldname": "attached",
+   "fieldtype": "Check",
+   "label": "Attached"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-02 12:09:31.789827",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Document List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.application_status==\"Rejected\"",
+ "creation": "2021-04-21 18:36:39.538541",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Student Applicant",
+ "enabled": 0,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h3>Application status</h3>\n\n<p>Your application {{ doc.name }} is Rejected.</p>\n\n\n<h4>Student Details</h4>\n\n<ul>\n<li>Student Name: {{ doc.first_name }} {{doc.middle_name}} {{doc.last_name}}\n<li>Student Email: {{ doc.student_email_id }}\n<li>Student Phone No: {{doc.student_mobile_number }}\n<li>Program : {{doc.programs_}}\n<li>Semster : {{doc.program}}\n<li>Academic Year :{{doc.academic_year}}\n</ul>",
+ "modified": "2021-12-15 17:15:29.870795",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Student Application Is Rejected",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "student_email_id"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender_email": "hello@bizmap.in",
+ "subject": "Your application {{doc.name}} is rejected.",
+ "value_changed": "application_status"
+}

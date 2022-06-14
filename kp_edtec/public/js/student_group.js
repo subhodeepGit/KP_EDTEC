@@ -15,7 +15,7 @@ frappe.ui.form.on("Student Group", {
             frm.remove_custom_button("Course Schedule","Create");
             frm.add_custom_button(__("Course Schedule"), function() {
                 frappe.model.open_mapped_doc({
-                    method: "kp_edtec.ed_tec.doctype.student_group.create_course_schedule",
+                    method: "kp_edtec.kp_edtec.doctype.student_group.create_course_schedule",
                     frm: frm,
                 });
             }, __('Create'))
@@ -26,7 +26,7 @@ frappe.ui.form.on("Student Group", {
 			if((cur_frm.doc.students).length!=0){
 				cur_frm.page.add_menu_item(__('Bulk Email'), function() { 
 					frappe.call({
-						method: 'kp_edtec.ed_tec.doctype.student_group.get_student_emails',
+						method: 'kp_edtec.kp_edtec.doctype.student_group.get_student_emails',
 						args: {
 							students: frm.doc.students
 						},
@@ -48,14 +48,14 @@ frappe.ui.form.on("Student Group", {
         frm.set_query('course', function(doc) {
 	        if(frm.doc.group_based_on=='Exam Declaration' && frm.doc.exam_declaration){
                 return {
-                    query:"kp_edtec.ed_tec.doctype.student_group.get_courses_from_ed",
+                    query:"kp_edtec.kp_edtec.doctype.student_group.get_courses_from_ed",
                     filters: {
                         "exam_declaration":frm.doc.exam_declaration
                     }
                 };
             }else{
             	return {
-					query: 'kp_edtec.ed_tec.doctype.student_group.filter_courses',
+					query: 'kp_edtec.kp_edtec.doctype.student_group.filter_courses',
 					filters:{"program":frm.doc.program}
 				};
 			}
@@ -90,7 +90,7 @@ frappe.ui.form.on("Student Group", {
 		frm.set_query("program", function() {
 			if(frm.doc.group_based_on == "Exam Declaration" && frm.doc.exam_declaration){
 				return {
-					query: 'kp_edtec.ed_tec.doctype.student_group.get_semester_by_exam_declaration',
+					query: 'kp_edtec.kp_edtec.doctype.student_group.get_semester_by_exam_declaration',
 					filters: {
 						"exam_declaration":frm.doc.exam_declaration
 					}
@@ -107,7 +107,7 @@ frappe.ui.form.on("Student Group", {
 
 		frm.fields_dict['multiples_programs'].grid.get_field('programs').get_query = function(doc, cdt, cdn) {
             return {   
-                query: 'kp_edtec.ed_tec.doctype.student_group.filter_programs_by_course', 
+                query: 'kp_edtec.kp_edtec.doctype.student_group.filter_programs_by_course', 
                 filters:{
                     "course":frm.doc.course
                 }
@@ -116,7 +116,7 @@ frappe.ui.form.on("Student Group", {
 		if(frm.doc.group_based_on=='Exam Declaration' && frm.doc.exam_declaration){
             frm.set_query('course', function(doc) {
                 return {
-                    query:"kp_edtec.ed_tec.doctype.student_group.get_courses_from_ed",
+                    query:"kp_edtec.kp_edtec.doctype.student_group.get_courses_from_ed",
                     filters: {
                         "exam_declaration":frm.doc.exam_declaration
                     }
@@ -125,7 +125,7 @@ frappe.ui.form.on("Student Group", {
         }else{
         	frm.set_query("course", function() {
 				return {
-					query: 'kp_edtec.ed_tec.doctype.student_group.filter_courses',
+					query: 'kp_edtec.kp_edtec.doctype.student_group.filter_courses',
 					filters:{"program":frm.doc.program}
 				};
 			});
@@ -146,7 +146,7 @@ frappe.ui.form.on("Student Group", {
 
 			if (frm.doc.academic_year) {
 				frappe.call({
-					method: 'kp_edtec.ed_tec.doctype.student_group.get_students',
+					method: 'kp_edtec.kp_edtec.doctype.student_group.get_students',
 					args: {
 						'academic_year': frm.doc.academic_year,
 						'academic_term': frm.doc.academic_term,
@@ -181,7 +181,7 @@ frappe.ui.form.on("Student Group", {
 		else if(frm.doc.group_based_on == "Combined Course"){
 			console.log("z")
 			frappe.call({
-                method: 'kp_edtec.ed_tec.doctype.student_group.get_student_based_on_combined_course',
+                method: 'kp_edtec.kp_edtec.doctype.student_group.get_student_based_on_combined_course',
                 args: {
 					filters:{
 						course: frm.doc.course,
@@ -230,7 +230,7 @@ frappe.ui.form.on("Student Group", {
 
            if (frm.doc.exam_declaration && frm.doc.programs){
 			frappe.call({
-                method: 'kp_edtec.ed_tec.doctype.student_group.get_student_based_on_exam_declaration',
+                method: 'kp_edtec.kp_edtec.doctype.student_group.get_student_based_on_exam_declaration',
                 args: {
 					exam_declaration:frm.doc.exam_declaration,
 					semester:frm.doc.program,
@@ -327,7 +327,7 @@ frappe.ui.form.on("Student Group", {
 		}
 		if (frm.doc.roll_number_series){
 			frappe.call({
-				method: 'kp_edtec.ed_tec.doctype.student_group.generate_roll_no',
+				method: 'kp_edtec.kp_edtec.doctype.student_group.generate_roll_no',
 				args: {
 					selected_naming:frm.doc.roll_number_series,
 					name:frm.doc.name,
@@ -355,7 +355,7 @@ frappe.ui.form.on('Student Group Instructor', {
 		else if (frm.doc.group_based_on == 'Batch' || frm.doc.group_based_on == 'Activity'){
 			semesters.push(frm.doc.program)
 			frappe.call({
-				method: 'kp_edtec.ed_tec.doctype.student_group.get_courses',
+				method: 'kp_edtec.kp_edtec.doctype.student_group.get_courses',
 				args: {
 					semester: frm.doc.program
 				},
@@ -370,7 +370,7 @@ frappe.ui.form.on('Student Group Instructor', {
 		else if (frm.doc.group_based_on == "Exam Declaration" && frm.doc.exam_declaration){
 			semesters.push(frm.doc.program)
 			frappe.call({
-				method: 'kp_edtec.ed_tec.doctype.student_group.get_courses_on_declaration',
+				method: 'kp_edtec.kp_edtec.doctype.student_group.get_courses_on_declaration',
 				args: {
 					declaration: frm.doc.exam_declaration
 				},
@@ -396,7 +396,7 @@ frappe.ui.form.on('Student Group Instructor', {
 						d.set_value("instructor","");
 						if (course){
 							frappe.call({
-								method: 'kp_edtec.ed_tec.doctype.student_group.get_instructor',
+								method: 'kp_edtec.kp_edtec.doctype.student_group.get_instructor',
 								args: {
 									filters:
 										{

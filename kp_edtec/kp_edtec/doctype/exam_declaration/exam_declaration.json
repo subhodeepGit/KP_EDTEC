@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "autoname": "EX-DEC-.#####",
+ "creation": "2021-04-12 13:22:50.371382",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exam_type",
+  "exam_name",
+  "disabled",
+  "is_application_required",
+  "column_break_2",
+  "academic_year",
+  "academic_term",
+  "application_form_start_date",
+  "application_form_end_date",
+  "section_break_4",
+  "exam_start_date",
+  "exam_end_date",
+  "column_break_8",
+  "admit_card_issue_date",
+  "block_list_display_date",
+  "section_break_8",
+  "exam_program",
+  "semesters",
+  "get_courses",
+  "courses_offered",
+  "eligibility_deails_section",
+  "minimum_attendance_criteria",
+  "certificate_creation_status",
+  "get_students",
+  "total_enrolled_student",
+  "students",
+  "fees_status",
+  "exam_fees_section",
+  "exam_fees_applicable",
+  "fee_structure",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "exam_type",
+   "fieldtype": "Link",
+   "label": "Exam Type",
+   "options": "Exam Type"
+  },
+  {
+   "depends_on": "is_application_required",
+   "fieldname": "application_form_start_date",
+   "fieldtype": "Date",
+   "label": "Application Form Start Date",
+   "mandatory_depends_on": "is_application_required"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "is_application_required",
+   "fieldname": "admit_card_issue_date",
+   "fieldtype": "Date",
+   "label": "Admit Card Issue Date",
+   "mandatory_depends_on": "is_application_required"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "exam_start_date",
+   "fieldtype": "Date",
+   "label": "Exam Start Date ",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "exam_end_date",
+   "fieldtype": "Date",
+   "label": "Exam End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "courses_offered",
+   "fieldtype": "Table",
+   "label": "Courses Offered",
+   "options": "Exam Courses",
+   "reqd": 1
+  },
+  {
+   "depends_on": "is_application_required",
+   "fieldname": "application_form_end_date",
+   "fieldtype": "Date",
+   "label": "Application Form End Date",
+   "mandatory_depends_on": "is_application_required"
+  },
+  {
+   "fieldname": "eligibility_deails_section",
+   "fieldtype": "Section Break",
+   "label": "Eligibility Details"
+  },
+  {
+   "description": "in %",
+   "fieldname": "minimum_attendance_criteria",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Minimum Attendance Criteria",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fees_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fees Status",
+   "options": "\nFull Paid\nMore than 50%\nAllow all",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exam_program",
+   "fieldtype": "Link",
+   "label": "Exam Program",
+   "options": "Programs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exam Declaration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exam_fees_section",
+   "fieldtype": "Section Break",
+   "label": "Exam Fees"
+  },
+  {
+   "depends_on": "eval:doc.exam_fees_applicable=='YES'",
+   "fieldname": "fee_structure",
+   "fieldtype": "Table",
+   "label": "Fee Structure",
+   "mandatory_depends_on": "eval:doc.exam_fees_applicable=='YES'",
+   "options": "Exam Declaration Fee Item"
+  },
+  {
+   "fieldname": "exam_fees_applicable",
+   "fieldtype": "Select",
+   "label": "Exam Fees Applicable",
+   "options": "\nYES\nNO"
+  },
+  {
+   "bold": 1,
+   "fieldname": "exam_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exam Name",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "block_list_display_date",
+   "fieldtype": "Date",
+   "label": "Block List Display Date",
+   "mandatory_depends_on": "is_application_required"
+  },
+  {
+   "fieldname": "semesters",
+   "fieldtype": "Table",
+   "label": "Semesters",
+   "options": "Examination Semester",
+   "reqd": 1
+  },
+  {
+   "fieldname": "get_courses",
+   "fieldtype": "Button",
+   "label": "Get Courses"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "is_application_required",
+   "fieldtype": "Check",
+   "label": "Is Application Required"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "students",
+   "fieldtype": "Table",
+   "label": "Students",
+   "options": "Students"
+  },
+  {
+   "fieldname": "get_students",
+   "fieldtype": "Button",
+   "label": "Get Students"
+  },
+  {
+   "fieldname": "certificate_creation_status",
+   "fieldtype": "Select",
+   "label": "Certificate Creation Status",
+   "options": "\nIn Process\nFailed\nSuccessful"
+  },
+  {
+   "fieldname": "total_enrolled_student",
+   "fieldtype": "Int",
+   "label": "Total Enrolled Student"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-05-31 15:58:17.022018",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Exam Declaration",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "exam_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

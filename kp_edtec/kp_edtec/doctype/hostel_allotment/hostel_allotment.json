@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "autoname": "HSTLT.-.####",
+ "creation": "2021-10-03 18:44:03.329513",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "student",
+  "student_name",
+  "allotment_from",
+  "allotment_to",
+  "column_break_3",
+  "purpose",
+  "reason",
+  "suspension_department",
+  "suspension_from",
+  "suspension_to",
+  "deallotment_date",
+  "section_break_3",
+  "building",
+  "room_type",
+  "available_beds",
+  "column_break_7",
+  "floor",
+  "from_room",
+  "to_room",
+  "hostel_admission",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Room Type",
+   "options": "Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Building",
+   "options": "Building",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "room.floor",
+   "fieldname": "floor",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Floor",
+   "options": "\nBasement\nGround\nFirst\nSecond\nThird\nFourth\nFifth\nSixth\nSeventh\nEighth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Hostel Allotment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_beds",
+   "fieldtype": "Int",
+   "label": "Available Beds",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Purpose",
+   "options": "\nAllotment\nShifting",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.purpose==\"Shifting\"",
+   "fieldname": "from_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Room",
+   "mandatory_depends_on": "eval:doc.purpose==\"Shifting\"",
+   "options": "Hostel Room"
+  },
+  {
+   "fieldname": "allotment_from",
+   "fieldtype": "Date",
+   "label": "Allotment From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allotment_to",
+   "fieldtype": "Date",
+   "label": "Allotment To",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:(doc.purpose==\"Shifting\" || doc.purpose==\"Allotment\")",
+   "fieldname": "to_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "To Room",
+   "mandatory_depends_on": "eval:(doc.purpose==\"Shifting\" || doc.purpose==\"Allotment\")",
+   "options": "Hostel Room"
+  },
+  {
+   "fieldname": "hostel_admission",
+   "fieldtype": "Link",
+   "label": "Hostel Admission",
+   "options": "Hostel Admission",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Reason",
+   "options": "\nSuspension"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.reason==\"Suspension\";",
+   "fieldname": "suspension_from",
+   "fieldtype": "Date",
+   "label": "Suspension From"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.reason==\"Suspension\";",
+   "fieldname": "suspension_to",
+   "fieldtype": "Date",
+   "label": "Suspension to"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.reason==\"Suspension\";",
+   "fieldname": "suspension_department",
+   "fieldtype": "Link",
+   "label": "Suspension Department",
+   "options": "Department"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "deallotment_date",
+   "fieldtype": "Date",
+   "label": "Deallotment Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-03-09 13:09:34.189661",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Hostel Allotment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "student_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

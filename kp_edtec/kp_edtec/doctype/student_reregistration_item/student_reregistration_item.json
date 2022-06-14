@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2021-10-25 16:58:50.138385",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "column_break_3",
+  "student_name",
+  "student_batch_name",
+  "additional_course_1",
+  "additional_course_2",
+  "additional_course_3",
+  "roll_no",
+  "registration_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "student_batch_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student Batch Name",
+   "options": "Student Batch Name"
+  },
+  {
+   "fieldname": "additional_course_1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Additional Course 1",
+   "options": "Course"
+  },
+  {
+   "fieldname": "additional_course_2",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Additional Course 2",
+   "options": "Course"
+  },
+  {
+   "fieldname": "additional_course_3",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Additional Course 3",
+   "options": "Course"
+  },
+  {
+   "fieldname": "roll_no",
+   "fieldtype": "Data",
+   "label": "Roll No"
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-28 10:37:51.666587",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Student Reregistration Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "restrict_to_domain": "Education",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

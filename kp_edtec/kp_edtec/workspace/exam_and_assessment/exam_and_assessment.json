@@ -1,0 +1,323 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-10-21 18:50:46.376679",
+ "developer_mode_only": 0,
+ "disable_user_customization": 1,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "education",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Exam And Assessment ",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Examination Master",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Type",
+   "link_to": "Exam Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assessment Criteria",
+   "link_to": "Assessment Criteria",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grading Scale",
+   "link_to": "Grading Scale",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student Exam Block Criteria",
+   "link_to": "Student Exam Block Criteria",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Examination",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Declaration",
+   "link_to": "Exam Declaration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Application",
+   "link_to": "Exam Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Paper Setting",
+   "link_to": "Exam Paper Setting",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Block List",
+   "link_to": "Student Exam Block List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student Admit Card",
+   "link_to": "Student Admit Card",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Post Exam Declaration",
+   "link_to": "Post Exam Declaration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Photocopy Applicatiion",
+   "link_to": "Photocopy Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reevaluation Application",
+   "link_to": "Reevaluation Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assessment ",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Assessment Plan",
+   "link_to": "Exam Assessment Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Course Assessment ",
+   "link_to": "Course Assessment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Continuous Evaluation",
+   "link_to": "Assessment Credits Allocation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Assessment Result",
+   "link_to": "Exam Assessment Result",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tools",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Course Assessment Result Tool",
+   "link_to": "Course Assessment Result Tool",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Final Result Declaration Tool",
+   "link_to": "Final Result Declaration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transcripts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leaving Certificate",
+   "link_to": "Leaving Certificate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Provisional Certificate",
+   "link_to": "Provisional Certificate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Migration Certificate",
+   "link_to": "Migration Certificate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Conduct Certificate",
+   "link_to": "Conduct Certificate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Course Assessment Report",
+   "link_to": "Course Assessment Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Course Wise Result",
+   "link_to": "Course Wise Result",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-01-31 17:13:02.701225",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Exam And Assessment",
+ "onboarding": "Education",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Exam Declaration",
+   "link_to": "Exam Declaration",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Exam Application",
+   "link_to": "Exam Application",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Admit card",
+   "link_to": "Student Admit Card",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Post Exam Declaration",
+   "link_to": "Post Exam Declaration",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Exam Assessment Plan",
+   "link_to": "Exam Assessment Plan",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Shortcuts"
+}

@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "autoname": "PHT-CPY-.####",
+ "creation": "2021-05-28 00:47:36.633325",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting__date",
+  "start_date",
+  "end_date",
+  "exam_declaration",
+  "exam_name",
+  "section_break_4",
+  "fees_applicable",
+  "fee_structure"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "posting__date",
+   "fieldtype": "Date",
+   "label": "Posting  Date"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fees_applicable",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fees Applicable",
+   "options": "\nYES\nNO",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.fees_applicable=='YES'",
+   "fieldname": "fee_structure",
+   "fieldtype": "Table",
+   "label": "Fee Structure",
+   "options": "Exam Declaration Fee Item"
+  },
+  {
+   "bold": 1,
+   "fieldname": "exam_declaration",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Exam Declaration",
+   "options": "Exam Declaration",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "exam_declaration.exam_name",
+   "fieldname": "exam_name",
+   "fieldtype": "Data",
+   "label": "Exam Name ",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-27 17:29:42.820294",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Post Exam Declaration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

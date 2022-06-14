@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2021-09-20 16:53:20.194522",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "agency",
+  "period",
+  "status",
+  "patent",
+  "grant_amount",
+  "research_score_claimed",
+  "score",
+  "score_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Title of Project"
+  },
+  {
+   "fieldname": "agency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Funding Agency"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Period of Project"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nOngoing Project\nCompleted Project\nConsultancy Project"
+  },
+  {
+   "fieldname": "grant_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Grant Amount"
+  },
+  {
+   "fieldname": "patent",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "P.I / C.I"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score"
+  },
+  {
+   "fieldname": "research_score_claimed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Research Score Claimed"
+  },
+  {
+   "default": "Completed Project :-\n\u25cf Score for completed projects of more than 10 lakhs: 10, Less than 10 lakhs: 05\n\u25cf Joint Projects : Both PI and CI would get 50% each\n\nOngoing Project :-\n\u25cf For Ongoing projects of more than 10 lakhs: 05, Less than 10 lakhs: 02\n\u25cf Joint Projects : Both PI and CI would get 50% each\n\nConsultancy Project :- \n\u25cf Score for consultancy projects: 03\n\u25cf Joint Projects: Both PI and CI would get 50% each",
+   "fieldname": "score_description",
+   "fieldtype": "Text Editor",
+   "label": "Score Description",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-04 12:33:29.066306",
+ "modified_by": "Administrator",
+ "module": "Kp Edtec",
+ "name": "Research Project And Consultancies",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

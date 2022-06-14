@@ -1,5 +1,5 @@
 import frappe
-# bench execute ed_tec.patches.program_enrollment_patch.set_course_name
+# bench execute kp_edtec.patches.program_enrollment_patch.set_course_name
 def execute():
     set_course_name()
     

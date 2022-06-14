@@ -2,7 +2,7 @@ frappe.ui.form.on('Course Schedule', {
     setup(frm){
         frm.set_query("course", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.course_schedule.get_courses_from_student_group_semester',
+                query: 'kp_edtec.kp_edtec.doctype.course_schedule.get_courses_from_student_group_semester',
                 filters: {
                     "student_group":frm.doc.student_group,
                     "instructor":frm.doc.instructor
@@ -11,7 +11,7 @@ frappe.ui.form.on('Course Schedule', {
         });
         frm.set_query("instructor", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.course_schedule.get_instructor_by_student_group',
+                query: 'kp_edtec.kp_edtec.doctype.course_schedule.get_instructor_by_student_group',
                 filters: {
                     "student_group":frm.doc.student_group
                 }
@@ -19,7 +19,7 @@ frappe.ui.form.on('Course Schedule', {
         });
         frm.set_query("exam_declaration", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.course_schedule.get_exam_declaration_by_course',
+                query: 'kp_edtec.kp_edtec.doctype.course_schedule.get_exam_declaration_by_course',
                 filters: {
                     "course":frm.doc.course
                 }
@@ -27,7 +27,7 @@ frappe.ui.form.on('Course Schedule', {
         });
         frm.set_query("student","student_paper_code",function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.course_schedule.get_student_by_student_group',
+                query: 'kp_edtec.kp_edtec.doctype.course_schedule.get_student_by_student_group',
                 filters: {
                     "student_group":frm.doc.student_group
                 }
@@ -35,7 +35,7 @@ frappe.ui.form.on('Course Schedule', {
         });
         frm.set_query("instructor", "additional_instructor", function() {
             return {
-                query: 'kp_edtec.ed_tec.doctype.course_schedule.get_instructor',
+                query: 'kp_edtec.kp_edtec.doctype.course_schedule.get_instructor',
                 filters:{"course":frm.doc.course,"student_group":frm.doc.student_group}
             };
         });
