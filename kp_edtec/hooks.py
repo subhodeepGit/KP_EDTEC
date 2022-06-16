@@ -40,9 +40,9 @@ doctype_js = {
                 "Course Enrollment":"public/js/course_enrollment.js",
                 "Course Schedule": "public/js/course_schedule.js",
                 "Course Scheduling Tool": "public/js/course_scheduling_tool.js",
-                "Fees" : "public/js/fees.js",
-                "Fee Schedule":"public/js/fee_schedule.js",
-                "Fee Structure" : "public/js/fee_structure.js",
+                # "Fees" : "public/js/fees.js",
+                # "Fee Schedule":"public/js/fee_schedule.js",
+                # "Fee Structure" : "public/js/fee_structure.js",
                 "Instructor":"public/js/instructor.js",
                 "Program Enrollment":"public/js/program_enrollment.js",
                 "Program":"public/js/program.js",
@@ -193,20 +193,20 @@ doc_events = {
     "Exam Paper Setting":{
         "validate":"kp_edtec.kp_edtec.validations.exam_paper_setting.validate"
     },
-    "Fees":{
-        "on_submit":"kp_edtec.kp_edtec.doctype.fees.on_submit",
-        "validate":"kp_edtec.kp_edtec.doctype.fees.validate",
-        "on_cancel":"kp_edtec.kp_edtec.doctype.fees.on_cancel"
-    },
-    "Fee Structure":{
-        "validate":"kp_edtec.kp_edtec.validations.fee_structure.validate"
-    },
+    # "Fees":{
+    #     "on_submit":"kp_edtec.kp_edtec.doctype.fees.on_submit",
+    #     "validate":"kp_edtec.kp_edtec.doctype.fees.validate",
+    #     "on_cancel":"kp_edtec.kp_edtec.doctype.fees.on_cancel"
+    # },
+    # "Fee Structure":{
+    #     "validate":"kp_edtec.kp_edtec.validations.fee_structure.validate"
+    # },
     "Feedback":{
         "validate":"kp_edtec.kp_edtec.validations.feedback.validate"
     },
-    "Fee Schedule":{
-        "validate":"kp_edtec.kp_edtec.validations.fee_schedule.validate"
-    },
+    # "Fee Schedule":{
+    #     "validate":"kp_edtec.kp_edtec.validations.fee_schedule.validate"
+    # },
     "Final Result Declaration":{
         "validate":"kp_edtec.kp_edtec.validations.final_result_declaration.validate"
     },

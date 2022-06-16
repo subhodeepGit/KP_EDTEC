@@ -80,7 +80,7 @@ def create_student(doc):
             
         else:
             user=frappe.get_doc("User",student.student_email_id)
-        set_PRN_number(doc)
+        # set_PRN_number(doc)
         user.email=student.student_email_id
         user.first_name=student.first_name
         user.last_name=student.last_name       
