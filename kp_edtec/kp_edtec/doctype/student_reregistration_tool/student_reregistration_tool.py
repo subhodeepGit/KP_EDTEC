@@ -69,6 +69,8 @@ def enroll_stud(self):
             prog_enrollment = frappe.new_doc("Program Enrollment")
             prog_enrollment.student = stud.student
             prog_enrollment.student_name = stud.student_name
+            prog_enrollment.roll_no=stud.roll_no
+            prog_enrollment.permanant_registration_number=stud.permanant_registration_number
             prog_enrollment.programs = self.programs
             prog_enrollment.program = self.new_semester
             prog_enrollment.academic_year = self.new_academic_year
