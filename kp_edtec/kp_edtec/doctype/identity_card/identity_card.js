@@ -23,5 +23,16 @@ frappe.ui.form.on('Identity Card', {
 				} 
 			}); 
 		}
-	}
+	},
+	refresh: function(frm) {
+		frm.add_custom_button(__("Download Passport Photo"), function() {
+			const data = frm.doc.passport_photo;
+			const a = document.createElement('a')
+			a.href = data
+			a.download = data.split('/').pop()
+			document.body.appendChild(a)
+			a.click()
+			document.body.removeChild(a);
+        })
+	},
 });
