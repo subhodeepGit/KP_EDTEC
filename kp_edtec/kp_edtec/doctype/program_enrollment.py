@@ -479,7 +479,7 @@ def validate_enrollment_admission_status(doc):
 def update_student(doc):
     student=frappe.get_doc("Student",doc.student)
     student.set("current_education",[])
-    for enroll in frappe.get_all("Program Enrollment",{"docstatus":1,"student":"EDU-STU-2022-00257"},{"programs","program","academic_year","academic_term"},order_by='creation desc',limit=1):
+    for enroll in frappe.get_all("Program Enrollment",{"docstatus":1,"student":doc.student},{"programs","program","academic_year","academic_term"},order_by='creation desc',limit=1):
         student.append("current_education",{
 			"programs":enroll.programs,
             "semesters":enroll.program,
