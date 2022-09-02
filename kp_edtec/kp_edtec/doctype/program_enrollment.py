@@ -476,15 +476,14 @@ def validate_enrollment_admission_status(doc):
     elif (doc.is_provisional_admission=="No" and doc.admission_status and doc.admission_status=="Provisional Admission"):
         frappe.throw("If you select Is Provisional Admission <b>No</b> Then Admission Status should not be <b>Provisional Admission</b>") 
 
-
 def update_student(doc):
     student=frappe.get_doc("Student",doc.student)
     student.set("current_education",[])
-    for enroll in frappe.get_all("Program Enrollment",{"docstatus":1,"student":doc.student},limit=1):
+    for enroll in frappe.get_all("Program Enrollment",{"docstatus":1,"student":doc.student},["programs","program","academic_year","academic_term"],limit=1):
         student.append("current_education",{
-            "programs":doc.programs,
-            "semesters":doc.program,
-            "academic_year":doc.academic_year,
-            "academic_term":doc.academic_term
+			"programs":enroll.programs,
+            "semesters":enroll.program,
+            "academic_year":enroll.academic_year,
+            "academic_term":enroll.academic_term
         })
     student.save()
