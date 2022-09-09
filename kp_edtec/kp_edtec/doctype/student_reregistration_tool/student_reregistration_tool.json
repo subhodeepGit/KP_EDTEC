@@ -140,9 +140,10 @@
   }
  ],
  "hide_toolbar": 1,
+ "in_create": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-03-23 14:47:30.617672",
+ "modified": "2022-09-09 16:21:09.901567",
  "modified_by": "Administrator",
  "module": "Kp Edtec",
  "name": "Student Reregistration Tool",
@@ -155,6 +156,7 @@
    "write": 1
   }
  ],
+ "read_only": 1,
  "restrict_to_domain": "Education",
  "sort_field": "modified",
  "sort_order": "DESC"
