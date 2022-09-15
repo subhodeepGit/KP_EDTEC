@@ -295,6 +295,9 @@ doc_events = {
     "Payment Entry": {
 		"validate": "kp_edtec.kp_edtec.validations.payment_entry.validate",
 	},
+    "File": {
+		"validate": "kp_edtec.kp_edtec.validations.file.validate",
+	},
 }
 
 # Scheduled Tasks
