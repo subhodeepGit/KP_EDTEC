@@ -36,9 +36,22 @@ frappe.ui.form.on('Identity Card Tool', {
 				frm.refresh_field("students_id_card")
 				frm.save();
 				frm.set_value("total_students_for_id_card",(r.message).length)
+				
 			} 
 			
 		});  
-	}
+	},
+
+
+	onload:function(frm)
+    {
+        frm.set_query("academic_term", function() {
+            return {
+                filters: {
+                    "academic_year":frm.doc.academic_year
+                }
+            };
+        });
+    }
 
 });

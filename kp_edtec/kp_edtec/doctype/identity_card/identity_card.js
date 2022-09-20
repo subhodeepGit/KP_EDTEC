@@ -16,6 +16,10 @@ frappe.ui.form.on('Identity Card', {
 						if (r.message['programs']){
 							frm.set_value("class_stream",r.message['programs'])
 						}
+
+						if (r.message['student_batch_name']){
+							frm.set_value("batch",r.message['student_batch_name'])
+						}
 						// if (r.message['prn']){
 						// 	frm.set_value("permanant_registration_number",r.message['prn'])
 						// }

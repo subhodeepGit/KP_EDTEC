@@ -16,4 +16,6 @@ class IdentityCard(Document):
 		edu_data =frappe.get_all("Current Educational Details",{"parent":self.student},["academic_year", "programs"])
 		data["programs"]= edu_data[0]['programs'] if edu_data[0]['programs'] else ""
 		data["academic_year"] = edu_data[0]['academic_year'] if edu_data[0]['academic_year'] else ""
+		print("data---->",data)
 		return data
+
