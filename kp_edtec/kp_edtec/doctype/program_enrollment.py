@@ -22,6 +22,7 @@ def set_duration(doc):
         event.duration = date_diff(event.end_date , event.start_date)
 
 def on_change(doc,method):
+    update_student(doc)
     for course in doc.get("courses"):
         if not course.course_name:
             course.course_name=frappe.db.get_value("Program Course",{"course":course.course},'course_name')
@@ -46,7 +47,8 @@ def get_roll(student):
         id_student=frappe.get_all("Student",filters=[['name','=',student]],fields=['name','roll_no','permanant_registration_number'])
         return id_student[0]
 
-
+def on_update_after_submit(doc,method):
+    update_student(doc)
 def on_cancel(doc,method):
     update_reserved_seats(doc)
     delete_permissions(doc)
@@ -72,7 +74,9 @@ def create_student(doc):
             "programs":doc.programs,
             "semesters":doc.program,
             "academic_year":doc.academic_year,
-            "academic_term":doc.academic_term           
+            "academic_term":doc.academic_term,
+            "student_batch_name":doc.student_batch_name,
+            "program_grade":doc.program_grade
         })
     if student.student_email_id:
         if not frappe.db.exists("User",student.student_email_id):
@@ -479,11 +483,13 @@ def validate_enrollment_admission_status(doc):
 def update_student(doc):
     student=frappe.get_doc("Student",doc.student)
     student.set("current_education",[])
-    for enroll in frappe.get_all("Program Enrollment",{"docstatus":1,"student":doc.student},["programs","program","academic_year","academic_term"],order_by='creation desc',limit=1):
+    for enroll in frappe.get_all("Program Enrollment",{"docstatus":1,"student":doc.student},["student_batch_name","program_grade","programs","program","academic_year","academic_term"],order_by='creation desc',limit=1):
         student.append("current_education",{
+            "program_grade":enroll.program_grade,
 			"programs":enroll.programs,
             "semesters":enroll.program,
             "academic_year":enroll.academic_year,
-            "academic_term":enroll.academic_term
+            "academic_term":enroll.academic_term,
+            "student_batch_name":enroll.student_batch_name     
         })
     student.save()
