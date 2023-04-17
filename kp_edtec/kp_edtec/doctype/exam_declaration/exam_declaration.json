@@ -43,7 +43,8 @@
    "fieldname": "exam_type",
    "fieldtype": "Link",
    "label": "Exam Type",
-   "options": "Exam Type"
+   "options": "Exam Type",
+   "reqd": 1
   },
   {
    "depends_on": "is_application_required",
@@ -67,15 +68,13 @@
    "allow_on_submit": 1,
    "fieldname": "exam_start_date",
    "fieldtype": "Date",
-   "label": "Exam Start Date ",
-   "reqd": 1
+   "label": "Exam Start Date "
   },
   {
    "allow_on_submit": 1,
    "fieldname": "exam_end_date",
    "fieldtype": "Date",
-   "label": "Exam End Date",
-   "reqd": 1
+   "label": "Exam End Date"
   },
   {
    "fieldname": "section_break_8",
@@ -85,9 +84,9 @@
    "allow_on_submit": 1,
    "fieldname": "courses_offered",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Courses Offered",
-   "options": "Exam Courses",
-   "reqd": 1
+   "options": "Exam Courses"
   },
   {
    "depends_on": "is_application_required",
@@ -105,17 +104,17 @@
    "description": "in %",
    "fieldname": "minimum_attendance_criteria",
    "fieldtype": "Float",
+   "hidden": 1,
    "in_list_view": 1,
-   "label": "Minimum Attendance Criteria",
-   "reqd": 1
+   "label": "Minimum Attendance Criteria"
   },
   {
    "fieldname": "fees_status",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Fees Status",
-   "options": "\nFull Paid\nMore than 50%\nAllow all",
-   "reqd": 1
+   "options": "\nFull Paid\nMore than 50%\nAllow all"
   },
   {
    "fieldname": "column_break_2",
@@ -172,7 +171,8 @@
    "fieldname": "exam_fees_applicable",
    "fieldtype": "Select",
    "label": "Exam Fees Applicable",
-   "options": "\nYES\nNO"
+   "options": "\nYES\nNO",
+   "reqd": 1
   },
   {
    "bold": 1,
@@ -187,11 +187,13 @@
    "default": "0",
    "fieldname": "disabled",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Disabled"
   },
   {
    "fieldname": "block_list_display_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Block List Display Date",
    "mandatory_depends_on": "is_application_required"
   },
@@ -205,6 +207,7 @@
   {
    "fieldname": "get_courses",
    "fieldtype": "Button",
+   "hidden": 1,
    "label": "Get Courses"
   },
   {
@@ -212,6 +215,7 @@
    "default": "0",
    "fieldname": "is_application_required",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Application Required"
   },
   {
@@ -219,7 +223,8 @@
    "fieldname": "students",
    "fieldtype": "Table",
    "label": "Students",
-   "options": "Students"
+   "options": "Students",
+   "reqd": 1
   },
   {
    "fieldname": "get_students",
@@ -235,13 +240,15 @@
   {
    "fieldname": "total_enrolled_student",
    "fieldtype": "Int",
-   "label": "Total Enrolled Student"
+   "hidden": 1,
+   "label": "Total Enrolled Student",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-05-31 15:58:17.022018",
+ "modified": "2023-04-17 15:10:44.313459",
  "modified_by": "Administrator",
  "module": "Kp Edtec",
  "name": "Exam Declaration",
