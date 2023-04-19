@@ -6,7 +6,7 @@ frappe.ui.form.on('User',{
         }
         if (frappe.user.has_role(["Student"]) && !frappe.user.has_role(["System Manager"])){ 
             Object.keys(cur_frm.fields_dict).forEach(field=>{
-                if (['email','new_password','logout_all_sessions','phone','mobile_no','interest','bio','mute_sounds','desk_theme'].includes(field)){
+                if (['new_password','logout_all_sessions','phone','mobile_no','interest','bio','mute_sounds','desk_theme'].includes(field)){
                     frm.set_df_property(field,'read_only',0)
                 }
                 else{
