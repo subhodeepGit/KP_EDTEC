@@ -10,7 +10,7 @@ from datetime import datetime
 from frappe.utils.background_jobs import enqueue
 from kp_edtec.kp_edtec.utils import date_greater_than_or_equal,academic_term,semester_belongs_to_programs,get_courses_by_semester,duplicate_row_validation
 from frappe.utils import flt
-from kp_edtec.kp_edtec.notification.custom_notification import exam_declaration_submit,exam_declaration_for_instructor_submit
+# from kp_edtec.kp_edtec.notification.custom_notification import exam_declaration_submit,exam_declaration_for_instructor_submit
 from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission
 from pytz import all_timezones, country_names
 from frappe.utils.data import nowtime
@@ -116,8 +116,8 @@ class ExamDeclaration(Document):
 
     def on_submit(self):
         self.set_user_permission()
-        exam_declaration_submit(self)
-        exam_declaration_for_instructor_submit(self)
+        # exam_declaration_submit(self)
+        # exam_declaration_for_instructor_submit(self)
         # self.make_exam_assessment_result()
         # fee_structure_id = fee_structure_validation(self)
         # create_fees(self,fee_structure_id,on_submit=1) 

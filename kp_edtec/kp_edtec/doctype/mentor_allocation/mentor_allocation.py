@@ -6,7 +6,7 @@ from frappe.model.document import Document
 from frappe.model.mapper import get_mapped_doc
 from frappe import msgprint, _
 from kp_edtec.kp_edtec.utils import duplicate_row_validation
-from kp_edtec.kp_edtec.notification.custom_notification import mentor_allocation_submit
+# from kp_edtec.kp_edtec.notification.custom_notification import mentor_allocation_submit
 
 class MentorAllocation(Document):
     def validate(self):
@@ -19,7 +19,7 @@ class MentorAllocation(Document):
             create_student_group(self)
         else:
             update_student_group(self, existed_stud_grp)
-        mentor_allocation_submit(self)
+        # mentor_allocation_submit(self)
         
     def on_cancel(self):
         existed_stud_grp = frappe.db.get_list("Student Group", {'mentor_allocation':self.name,'disabled':0},'name')

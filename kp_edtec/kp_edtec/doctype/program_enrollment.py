@@ -4,7 +4,7 @@ from frappe.utils import comma_and, get_link_to_form, getdate,date_diff,add_days
 from kp_edtec.kp_edtec.doctype.custom_naming_series  import get_default_naming_series,make_autoname,_field_autoname,set_name_by_naming_series,_prompt_autoname,_format_autoname
 from kp_edtec.kp_edtec.utils import get_courses_by_semester,duplicate_row_validation
 from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission,delete_ref_doctype_permissions
-from kp_edtec.kp_edtec.notification.custom_notification import program_enrollment_admitted,program_enrollment_provisional_admission
+# from kp_edtec.kp_edtec.notification.custom_notification import program_enrollment_admitted,program_enrollment_provisional_admission
 from frappe.utils.background_jobs import enqueue
 # from frappe.desk.reportview import get_match_cond
 
@@ -28,11 +28,11 @@ def on_change(doc,method):
             course.course_name=frappe.db.get_value("Program Course",{"course":course.course},'course_name')
 
     validate_enrollment_admission_status(doc)
-    if doc.docstatus==1:
-        if doc.admission_status=="Provisional Admission":
-            program_enrollment_provisional_admission(doc)
-        else:
-            program_enrollment_admitted(doc)
+    # if doc.docstatus==1:
+    #     if doc.admission_status=="Provisional Admission":
+    #         program_enrollment_provisional_admission(doc)
+    #     else:
+    #         program_enrollment_admitted(doc)
     #     update_enrollment_admission_status(doc)
 
 @frappe.whitelist()

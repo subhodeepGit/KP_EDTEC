@@ -7,7 +7,7 @@ import frappe
 from frappe.model.document import Document
 from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission
 from frappe.utils import today
-from kp_edtec.kp_edtec.notification.custom_notification import branch_change_declaration_submit
+# from kp_edtec.kp_edtec.notification.custom_notification import branch_change_declaration_submit
 
 class BranchslidingDeclaration(Document):
     def validate(self):
@@ -18,7 +18,7 @@ class BranchslidingDeclaration(Document):
         self.date_validation()
 
     def on_submit(self):
-        branch_change_declaration_submit(self)
+        # branch_change_declaration_submit(self)
         self.share_document()
 
     def on_cancel(self):

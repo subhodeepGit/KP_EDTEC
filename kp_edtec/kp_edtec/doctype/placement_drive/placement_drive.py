@@ -4,14 +4,14 @@
 import frappe
 from frappe.model.document import Document
 from frappe import msgprint, _
-from kp_edtec.kp_edtec.notification.custom_notification import placement_drive_submit
+# from kp_edtec.kp_edtec.notification.custom_notification import placement_drive_submit
 
 class PlacementDrive(Document):
 	def validate(self):
 		validate_application_date(self)
 
 	def on_submit(self):
-		placement_drive_submit(self)
+		# placement_drive_submit(self)
 		self.set_permission_to_enroll_student()
 
 	def on_cancel(self):

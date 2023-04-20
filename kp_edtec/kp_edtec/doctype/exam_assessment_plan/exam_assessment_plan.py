@@ -7,7 +7,7 @@ from frappe.model.document import Document
 from frappe import _
 from frappe.utils import today,getdate
 from kp_edtec.kp_edtec.utils import duplicate_row_validation,get_courses_by_semester
-from kp_edtec.kp_edtec.notification.custom_notification import exam_evaluation_plan_for_paper_setter_submit,exam_evaluation_plan_for_moderator_submit
+# from kp_edtec.kp_edtec.notification.custom_notification import exam_evaluation_plan_for_paper_setter_submit,exam_evaluation_plan_for_moderator_submit
 
 class ExamAssessmentPlan(Document):
     def validate(self):
@@ -19,9 +19,9 @@ class ExamAssessmentPlan(Document):
         duplicate_row_validation(self,"examiners_list",["paper_setter","course"])
         duplicate_row_validation(self,"moderator_list",["moderator","course"])
     
-    def on_submit(self):
-        exam_evaluation_plan_for_paper_setter_submit(self)
-        exam_evaluation_plan_for_moderator_submit(self)
+    # def on_submit(self):
+    #     exam_evaluation_plan_for_paper_setter_submit(self)
+    #     exam_evaluation_plan_for_moderator_submit(self)
 
     @frappe.whitelist()
     def create_exam_paper_setter(self):

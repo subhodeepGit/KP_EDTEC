@@ -2,7 +2,7 @@ import frappe,json,re
 from frappe.model.mapper import get_mapped_doc
 from frappe import msgprint, _
 from kp_edtec.kp_edtec.utils import duplicate_row_validation
-from kp_edtec.kp_edtec.notification.custom_notification import student_applicant_submit
+# from kp_edtec.kp_edtec.notification.custom_notification import student_applicant_submit
 
 
 def validate(doc,method):
@@ -256,8 +256,8 @@ def get_document_list_by_category(doc):
     doc_list  = frappe.db.sql("""SELECT DL.document_name, DL.mandatory, DL.is_available from `tabDocuments Template List` as DL 
     inner join `tabDocuments Template` as D on DL.parent= D.name where D.student_category='{0}' and D.academic_year = '{1}'""".format(doc.student_category,doc.academic_year), as_dict=1)
     return doc_list if doc_list else []
-def on_submit(self):
-        student_applicant_submit(self)
+# def on_submit(self):
+#         student_applicant_submit(self)
 @frappe.whitelist()
 def enroll_student(source_name):
     from kp_edtec.kp_edtec.doctype.student_exchange_applicant.student_exchange_applicant import get_academic_calender_table

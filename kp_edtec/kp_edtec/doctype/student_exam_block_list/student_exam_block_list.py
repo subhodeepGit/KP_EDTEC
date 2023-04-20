@@ -5,13 +5,14 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
-from kp_edtec.kp_edtec.notification.custom_notification import student_exam_block_submit
+# from kp_edtec.kp_edtec.notification.custom_notification import student_exam_block_submit
 from frappe.utils import today, getdate
 
 class StudentExamBlockList(Document):
     def on_submit(self):
-        if self.send_notification:
-            student_exam_block_submit(self)
+        # if self.send_notification:
+        #     student_exam_block_submit(self)
+        pass
         
 @frappe.whitelist()
 def get_declar(doctype, txt, searchfield, start, page_len, filters):

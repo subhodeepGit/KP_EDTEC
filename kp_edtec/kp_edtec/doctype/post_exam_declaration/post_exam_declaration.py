@@ -6,13 +6,13 @@ from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 from frappe.utils import getdate
-from kp_edtec.kp_edtec.notification.custom_notification import post_exam_declaration_save
+# from kp_edtec.kp_edtec.notification.custom_notification import post_exam_declaration_save
 
 class PostExamDeclaration(Document):
     def validate(self):
         date_validation(self)
-        if self.is_new():
-            post_exam_declaration_save(self)
+        # if self.is_new():
+        #     post_exam_declaration_save(self)
 
 @frappe.whitelist()
 def get_fee_structure(doctype, txt, searchfield, start, page_len, filters):

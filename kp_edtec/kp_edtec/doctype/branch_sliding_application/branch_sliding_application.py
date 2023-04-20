@@ -7,7 +7,7 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import today,getdate
 from kp_edtec.kp_edtec.utils import get_courses_by_semester
-from kp_edtec.kp_edtec.notification.custom_notification import branch_change_application_applied,branch_change_application_approved,branch_change_application_rejected
+# from kp_edtec.kp_edtec.notification.custom_notification import branch_change_application_applied,branch_change_application_approved,branch_change_application_rejected
 
 class BranchSlidingApplication(Document):
     def validate(self):
@@ -36,13 +36,13 @@ class BranchSlidingApplication(Document):
                     frappe.throw("<b>Seats</b> Not Avalible")
         date_validation(self)       
 
-    def on_change(self):
-        if self.docstatus==1 and self.status=="Applied":
-            branch_change_application_applied(self)
-        elif self.docstatus==1 and self.status=="Approved":
-            branch_change_application_approved(self)
-        elif self.docstatus==1 and self.status=="Rejected":
-            branch_change_application_rejected(self)
+    # def on_change(self):
+    #     if self.docstatus==1 and self.status=="Applied":
+    #         branch_change_application_applied(self)
+    #     elif self.docstatus==1 and self.status=="Approved":
+    #         branch_change_application_approved(self)
+    #     elif self.docstatus==1 and self.status=="Rejected":
+    #         branch_change_application_rejected(self)
 
 @frappe.whitelist()
 def get_student_details(student):
