@@ -6,6 +6,7 @@ from kp_edtec.kp_edtec.utils import get_courses_by_semester,duplicate_row_valida
 from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission,delete_ref_doctype_permissions
 # from kp_edtec.kp_edtec.notification.custom_notification import program_enrollment_admitted,program_enrollment_provisional_admission
 from frappe.utils.background_jobs import enqueue
+from frappe.desk.form.linked_with import get_linked_doctypes
 # from frappe.desk.reportview import get_match_cond
 
 def validate(doc,method):
@@ -22,6 +23,7 @@ def set_duration(doc):
         event.duration = date_diff(event.end_date , event.start_date)
 
 def on_change(doc,method):
+    update_program_enrollment_stuBatch(doc)
     update_student(doc)
     for course in doc.get("courses"):
         if not course.course_name:
@@ -40,6 +42,21 @@ def get_program_enrollment(student):
     data=frappe.get_all("Program Enrollment",{'student':student,'docstatus':1},['name','program','programs'],limit=1)
     if len(data)>0:
         return data[0]
+
+def update_program_enrollment_stuBatch(doc):
+    student_batch=doc.student_batch_name
+    fees=frappe.get_list("Fees",{"program_enrollment":doc.name})
+    hostel_fees=frappe.get_list("Hostel Fees",{"program_enrollment":doc.name})
+    fee_waiver=frappe.get_list("Fee Waiver",{"program_enrollment":doc.name})
+    transport_service=frappe.get_list("Transport Service",{"program_enrollment":doc.name})
+    if fees:
+        frappe.db.sql("""UPDATE `tabFees` set student_batch = %s where program_enrollment = %s""",(student_batch, doc.name))
+    if hostel_fees:
+        frappe.db.sql("""UPDATE `tabHostel Fees` set student_batch = %s where program_enrollment = %s""",(student_batch, doc.name))
+    if fee_waiver:
+        frappe.db.sql("""UPDATE `tabFee Waiver` set student_batch = %s where program_enrollment = %s""",(student_batch, doc.name))
+    if transport_service:
+        frappe.db.sql("""UPDATE `tabTransport Service` set student_batch = %s where program_enrollment = %s""",(student_batch, doc.name))
 
 
 @frappe.whitelist()
