@@ -3,6 +3,7 @@ from frappe import _
 from kp_edtec.kp_edtec.doctype.workspace import make_workspace_for_user
 from kp_edtec.kp_edtec.utils import duplicate_row_validation
 from kp_edtec.kp_edtec.doctype.user_permission import add_user_permission,delete_ref_doctype_permissions
+from frappe.desk.form.linked_with import get_linked_doctypes
 
 @frappe.whitelist()
 def get_student_program(student):
@@ -49,6 +50,7 @@ def on_update(doc,method):
 		frappe.db.set_value("Student Applicant", doc.student_applicant, "application_status", "Approved")
 
 def validate(doc,method):
+	update_student_records(doc)
 	check_unique(doc)
 	duplicate_row_validation(doc, "education_details", ['qualification','percentage'])
 	duplicate_row_validation(doc, "siblings", ['full_name', 'gender'])
@@ -84,3 +86,28 @@ def create_user_permission(doc):
 
 		for stu_appl in frappe.get_all("Student Exchange Applicant",{"student_email_id":doc.user}):
 			add_user_permission("Student Exchange Applicant",stu_appl.name, doc.user,doc)
+
+def update_student_records(self):
+	linked_doctypes = get_linked_doctypes("Student")
+	for d in linked_doctypes:
+		meta = frappe.get_meta(d)
+		if not meta.issingle:
+			if "sams_portal_id" in [f.fieldname for f in meta.fields]:
+				if d != "Student Applicant" and d != "Student":
+					frappe.db.sql("""UPDATE `tab{0}` set sams_portal_id = %s where {1} = %s""".format(d, linked_doctypes[d]["fieldname"][0]),(self.sams_portal_id, self.name))
+			
+			if "permanent_registration_number" in [f.fieldname for f in meta.fields]:
+				if d != "Student Applicant" and d != "Student":
+					frappe.db.sql("""UPDATE `tab{0}` set permanent_registration_number = %s where {1} = %s""".format(d, linked_doctypes[d]["fieldname"][0]),(self.permanant_registration_number, self.name))
+			
+			if "permanant_registration_number" in [f.fieldname for f in meta.fields]:
+				if d != "Student Applicant" and d != "Student":
+					frappe.db.sql("""UPDATE `tab{0}` set permanant_registration_number = %s where {1} = %s""".format(d, linked_doctypes[d]["fieldname"][0]),(self.permanant_registration_number, self.name))
+
+			if "registration_number" in [f.fieldname for f in meta.fields]:
+				if d != "Student Applicant" and d != "Student":
+					frappe.db.sql("""UPDATE `tab{0}` set registration_number = %s where {1} = %s""".format(d, linked_doctypes[d]["fieldname"][0]),(self.permanant_registration_number, self.name))
+
+			if "roll_no" in [f.fieldname for f in meta.fields]:
+				if d != "Student Applicant" and d != "Student" and d != "Student Group":			
+					frappe.db.sql("""UPDATE `tab{0}` set roll_no = %s where {1} = %s""".format(d, linked_doctypes[d]["fieldname"][0]),(self.roll_no, self.name))

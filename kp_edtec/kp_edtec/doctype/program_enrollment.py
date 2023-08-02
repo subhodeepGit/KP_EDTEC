@@ -45,10 +45,10 @@ def get_program_enrollment(student):
 
 def update_program_enrollment_stuBatch(doc):
     student_batch=doc.student_batch_name
-    fees=frappe.get_list("Fees",{"program_enrollment":doc.name})
-    hostel_fees=frappe.get_list("Hostel Fees",{"program_enrollment":doc.name})
-    fee_waiver=frappe.get_list("Fee Waiver",{"program_enrollment":doc.name})
-    transport_service=frappe.get_list("Transport Service",{"program_enrollment":doc.name})
+    fees=frappe.db.sql("""SELECT name from `tabFees` where program_enrollment = %s""",(doc.name),as_dict=True)
+    hostel_fees=frappe.db.sql("""SELECT name from `tabHostel Fees` where program_enrollment = %s""",(doc.name),as_dict=True)
+    fee_waiver=frappe.db.sql("""SELECT name from `tabFee Waiver` where program_enrollment = %s""",(doc.name),as_dict=True)
+    transport_service=frappe.db.sql("""SELECT name from `tabTransport Service` where program_enrollment = %s""",(doc.name),as_dict=True)
     if fees:
         frappe.db.sql("""UPDATE `tabFees` set student_batch = %s where program_enrollment = %s""",(student_batch, doc.name))
     if hostel_fees:
